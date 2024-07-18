@@ -1,0 +1,50 @@
+diff --git a/readme.md b/readme.md
+index c5c2174..aee8cd5 100644
+--- a/readme.md
++++ b/readme.md
+@@ -60,7 +60,7 @@ bash download_example_data.sh
+ This will download a checkpoint and data fragment of DSEC-Detection on which you can test the code. 
+ Once downloaded, run the following command
+ ```bash 
+-LOG_DIR=/path/to/log
++LOG_DIR=./log
+ DEVICE=1
+ CUDA_VISIBLE_DEVICES=$DEVICE python scripts/run_test_interframe.py --config config/dagr-s-dsec.yaml \
+                                                                    --use_image \
+diff --git a/scripts/run_test_interframe.py b/scripts/run_test_interframe.py
+index 7d653d9..25b24a2 100644
+--- a/scripts/run_test_interframe.py
++++ b/scripts/run_test_interframe.py
+@@ -1,6 +1,6 @@
+ import torch
+ import tqdm
+-import wandb
++# import wandb
+ import os
+ os.environ['CUDA_DEVICE_ORDER'] = 'PCI_BUS_ID'
+ 
+diff --git a/setup.py b/setup.py
+index 2ed9af3..47063ca 100644
+--- a/setup.py
++++ b/setup.py
+@@ -1,6 +1,6 @@
+ from distutils.core import setup
+ from torch.utils.cpp_extension import BuildExtension, CUDAExtension
+-import pybind11
++
+ setup(
+     name='dagr',
+     packages=['dagr'],
+diff --git a/src/dagr/utils/logging.py b/src/dagr/utils/logging.py
+index 85020de..d72d172 100644
+--- a/src/dagr/utils/logging.py
++++ b/src/dagr/utils/logging.py
+@@ -16,7 +16,7 @@ def set_up_logging_directory(dataset, task, output_directory):
+ 
+     output_directory = output_directory / dataset / task
+     output_directory.mkdir(parents=True, exist_ok=True)
+-    wandb.init(project=project, entity="rpg", save_code=True, dir=str(output_directory))
++    wandb.init(project=project, entity="244870378-tsinghua-university", save_code=True, dir=str(output_directory))
+ 
+     name = wandb.run.name
+     output_directory = output_directory / name

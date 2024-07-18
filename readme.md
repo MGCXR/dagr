@@ -60,7 +60,7 @@ bash download_example_data.sh
 This will download a checkpoint and data fragment of DSEC-Detection on which you can test the code. 
 Once downloaded, run the following command
 ```bash 
-LOG_DIR=/path/to/log
+LOG_DIR=./log
 DEVICE=1
 CUDA_VISIBLE_DEVICES=$DEVICE python scripts/run_test_interframe.py --config config/dagr-s-dsec.yaml \
                                                                    --use_image \

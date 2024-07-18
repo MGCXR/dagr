@@ -1,6 +1,6 @@
 from distutils.core import setup
 from torch.utils.cpp_extension import BuildExtension, CUDAExtension
-import pybind11
+
 setup(
     name='dagr',
     packages=['dagr'],

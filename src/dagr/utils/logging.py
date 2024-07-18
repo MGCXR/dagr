@@ -16,7 +16,7 @@ def set_up_logging_directory(dataset, task, output_directory):
 
     output_directory = output_directory / dataset / task
     output_directory.mkdir(parents=True, exist_ok=True)
-    wandb.init(project=project, entity="rpg", save_code=True, dir=str(output_directory))
+    wandb.init(project=project, entity="244870378-tsinghua-university", save_code=True, dir=str(output_directory))
 
     name = wandb.run.name
     output_directory = output_directory / name
