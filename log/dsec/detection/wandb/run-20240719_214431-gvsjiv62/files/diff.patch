@@ -1,0 +1,48 @@
+diff --git a/log/dsec/detection/wandb/debug-internal.log b/log/dsec/detection/wandb/debug-internal.log
+index 8afea43..27e196c 120000
+--- a/log/dsec/detection/wandb/debug-internal.log
++++ b/log/dsec/detection/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20240719_010753-2o4o3727/logs/debug-internal.log
+\ No newline at end of file
++run-20240719_214431-gvsjiv62/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/log/dsec/detection/wandb/debug.log b/log/dsec/detection/wandb/debug.log
+index a42bdfb..ea54651 120000
+--- a/log/dsec/detection/wandb/debug.log
++++ b/log/dsec/detection/wandb/debug.log
+@@ -1 +1 @@
+-run-20240719_010753-2o4o3727/logs/debug.log
+\ No newline at end of file
++run-20240719_214431-gvsjiv62/logs/debug.log
+\ No newline at end of file
+diff --git a/log/dsec/detection/wandb/latest-run b/log/dsec/detection/wandb/latest-run
+index 2211238..b102ac5 120000
+--- a/log/dsec/detection/wandb/latest-run
++++ b/log/dsec/detection/wandb/latest-run
+@@ -1 +1 @@
+-run-20240719_010753-2o4o3727
+\ No newline at end of file
++run-20240719_214431-gvsjiv62
+\ No newline at end of file
+diff --git a/src/dagr/utils/testing.py b/src/dagr/utils/testing.py
+index ed90db7..aa81722 100644
+--- a/src/dagr/utils/testing.py
++++ b/src/dagr/utils/testing.py
+@@ -2,6 +2,7 @@ import torch
+ from dagr.utils.logging import log_bboxes
+ from dagr.utils.buffers import DetectionBuffer, format_data
+ import tqdm
++from rich.progress import track
+ 
+ def to_npy(detections):
+     return [{k: v.cpu().numpy() for k, v in d.items()} for d in detections]
+@@ -25,7 +26,7 @@ def run_test_with_visualization(loader, model, dataset: str, log_every_n_batch=-
+     if compile_detections:
+         compiled_detections = []
+ 
+-    for i, data in enumerate(tqdm.tqdm(loader, desc=f"Testing {name}")):
++    for i, data in enumerate(track(loader, desc=f"Testing {name}")):
+         data = data.cuda(non_blocking=True)
+         data_for_visualization = data.clone()
+ 

@@ -3,6 +3,7 @@ from dagr.utils.logging import log_bboxes
 from dagr.utils.buffers import DetectionBuffer, format_data
 import tqdm
 
+
 def to_npy(detections):
     return [{k: v.cpu().numpy() for k, v in d.items()} for d in detections]
 

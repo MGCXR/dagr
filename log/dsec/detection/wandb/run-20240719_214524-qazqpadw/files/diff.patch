@@ -1,0 +1,48 @@
+diff --git a/log/dsec/detection/wandb/debug-internal.log b/log/dsec/detection/wandb/debug-internal.log
+index 8afea43..6682682 120000
+--- a/log/dsec/detection/wandb/debug-internal.log
++++ b/log/dsec/detection/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20240719_010753-2o4o3727/logs/debug-internal.log
+\ No newline at end of file
++run-20240719_214524-qazqpadw/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/log/dsec/detection/wandb/debug.log b/log/dsec/detection/wandb/debug.log
+index a42bdfb..76ce970 120000
+--- a/log/dsec/detection/wandb/debug.log
++++ b/log/dsec/detection/wandb/debug.log
+@@ -1 +1 @@
+-run-20240719_010753-2o4o3727/logs/debug.log
+\ No newline at end of file
++run-20240719_214524-qazqpadw/logs/debug.log
+\ No newline at end of file
+diff --git a/log/dsec/detection/wandb/latest-run b/log/dsec/detection/wandb/latest-run
+index 2211238..5588e68 120000
+--- a/log/dsec/detection/wandb/latest-run
++++ b/log/dsec/detection/wandb/latest-run
+@@ -1 +1 @@
+-run-20240719_010753-2o4o3727
+\ No newline at end of file
++run-20240719_214524-qazqpadw
+\ No newline at end of file
+diff --git a/src/dagr/utils/testing.py b/src/dagr/utils/testing.py
+index ed90db7..7982ed0 100644
+--- a/src/dagr/utils/testing.py
++++ b/src/dagr/utils/testing.py
+@@ -3,6 +3,7 @@ from dagr.utils.logging import log_bboxes
+ from dagr.utils.buffers import DetectionBuffer, format_data
+ import tqdm
+ 
++
+ def to_npy(detections):
+     return [{k: v.cpu().numpy() for k, v in d.items()} for d in detections]
+ 
+@@ -25,7 +26,7 @@ def run_test_with_visualization(loader, model, dataset: str, log_every_n_batch=-
+     if compile_detections:
+         compiled_detections = []
+ 
+-    for i, data in enumerate(tqdm.tqdm(loader, desc=f"Testing {name}")):
++    for i, data in enumerate(tqdm(loader, desc=f"Testing {name}")):
+         data = data.cuda(non_blocking=True)
+         data_for_visualization = data.clone()
+ 

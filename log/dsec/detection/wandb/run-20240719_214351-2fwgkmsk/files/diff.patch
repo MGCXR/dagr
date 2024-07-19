@@ -1,0 +1,39 @@
+diff --git a/log/dsec/detection/wandb/debug-internal.log b/log/dsec/detection/wandb/debug-internal.log
+index 8afea43..cb62b6e 120000
+--- a/log/dsec/detection/wandb/debug-internal.log
++++ b/log/dsec/detection/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20240719_010753-2o4o3727/logs/debug-internal.log
+\ No newline at end of file
++run-20240719_214351-2fwgkmsk/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/log/dsec/detection/wandb/debug.log b/log/dsec/detection/wandb/debug.log
+index a42bdfb..e72c0aa 120000
+--- a/log/dsec/detection/wandb/debug.log
++++ b/log/dsec/detection/wandb/debug.log
+@@ -1 +1 @@
+-run-20240719_010753-2o4o3727/logs/debug.log
+\ No newline at end of file
++run-20240719_214351-2fwgkmsk/logs/debug.log
+\ No newline at end of file
+diff --git a/log/dsec/detection/wandb/latest-run b/log/dsec/detection/wandb/latest-run
+index 2211238..62cd867 120000
+--- a/log/dsec/detection/wandb/latest-run
++++ b/log/dsec/detection/wandb/latest-run
+@@ -1 +1 @@
+-run-20240719_010753-2o4o3727
+\ No newline at end of file
++run-20240719_214351-2fwgkmsk
+\ No newline at end of file
+diff --git a/src/dagr/utils/testing.py b/src/dagr/utils/testing.py
+index ed90db7..df93046 100644
+--- a/src/dagr/utils/testing.py
++++ b/src/dagr/utils/testing.py
+@@ -2,6 +2,7 @@ import torch
+ from dagr.utils.logging import log_bboxes
+ from dagr.utils.buffers import DetectionBuffer, format_data
+ import tqdm
++import rich
+ 
+ def to_npy(detections):
+     return [{k: v.cpu().numpy() for k, v in d.items()} for d in detections]
