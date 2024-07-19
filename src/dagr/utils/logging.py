@@ -8,7 +8,7 @@ from pathlib import PosixPath
 from pprint import pprint
 from pathlib import Path
 
-from torch_geometric.data import Data
+from torch_geometric.loader import DataLoader
 
 
 def set_up_logging_directory(dataset, task, output_directory):
@@ -78,7 +78,7 @@ def log_bboxes(data: Batch,
 
     wandb.log({key: image})
 
-def visualize_events(data: Data)->torch.Tensor:
+def visualize_events(data: DataLoader)->torch.Tensor:
     x, y = data.pos[:,:2].long().t()
     p = data.x[:,0].long()
 

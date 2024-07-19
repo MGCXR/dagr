@@ -27,8 +27,10 @@ def run_test_with_visualization(loader, model, dataset: str, log_every_n_batch=-
         compiled_detections = []
 
     for i, data in enumerate(tqdm.tqdm(loader, desc=f"Testing {name}")):
+        # print(f"Batch index: {i}")
         data = data.cuda(non_blocking=True)
         data_for_visualization = data.clone()
+
 
         data = format_data(data)
         detections, targets = model(data.clone())

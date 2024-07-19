@@ -1,0 +1,85 @@
+diff --git a/log/dsec/detection/wandb/debug-internal.log b/log/dsec/detection/wandb/debug-internal.log
+index 445f2da..c527f28 120000
+--- a/log/dsec/detection/wandb/debug-internal.log
++++ b/log/dsec/detection/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20240719_214702-zpfph57z/logs/debug-internal.log
+\ No newline at end of file
++run-20240719_223836-yd12i641/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/log/dsec/detection/wandb/debug.log b/log/dsec/detection/wandb/debug.log
+index 66fe573..7d195fd 120000
+--- a/log/dsec/detection/wandb/debug.log
++++ b/log/dsec/detection/wandb/debug.log
+@@ -1 +1 @@
+-run-20240719_214702-zpfph57z/logs/debug.log
+\ No newline at end of file
++run-20240719_223836-yd12i641/logs/debug.log
+\ No newline at end of file
+diff --git a/log/dsec/detection/wandb/latest-run b/log/dsec/detection/wandb/latest-run
+index 5b58e71..a7f0a72 120000
+--- a/log/dsec/detection/wandb/latest-run
++++ b/log/dsec/detection/wandb/latest-run
+@@ -1 +1 @@
+-run-20240719_214702-zpfph57z
+\ No newline at end of file
++run-20240719_223836-yd12i641
+\ No newline at end of file
+diff --git a/scripts/run_test.py b/scripts/run_test.py
+index 1562c74..5b9775c 100644
+--- a/scripts/run_test.py
++++ b/scripts/run_test.py
+@@ -4,7 +4,7 @@ import torch
+ import wandb
+ os.environ['CUDA_DEVICE_ORDER'] = 'PCI_BUS_ID'
+ 
+-from torch_geometric.data import DataLoader
++from torch_geometric.loader import DataLoader
+ from dagr.utils.args import FLAGS
+ 
+ from dagr.data.dsec_data import DSEC
+@@ -54,7 +54,7 @@ if __name__ == '__main__':
+     ema = ModelEMA(model)
+ 
+     assert "checkpoint" in args
+-    checkpoint = torch.load(args.checkpoint)
++    checkpoint = torch.load(args.checkpoint,weights_only=False)
+     ema.ema.load_state_dict(checkpoint['ema'])
+     ema.ema.cache_luts(radius=args.radius, height=test_dataset.height, width=test_dataset.width)
+ 
+diff --git a/src/dagr/utils/logging.py b/src/dagr/utils/logging.py
+index d72d172..dd495f3 100644
+--- a/src/dagr/utils/logging.py
++++ b/src/dagr/utils/logging.py
+@@ -8,7 +8,7 @@ from pathlib import PosixPath
+ from pprint import pprint
+ from pathlib import Path
+ 
+-from torch_geometric.data import Data
++from torch_geometric.loader import DataLoader
+ 
+ 
+ def set_up_logging_directory(dataset, task, output_directory):
+@@ -78,7 +78,7 @@ def log_bboxes(data: Batch,
+ 
+     wandb.log({key: image})
+ 
+-def visualize_events(data: Data)->torch.Tensor:
++def visualize_events(data: DataLoader)->torch.Tensor:
+     x, y = data.pos[:,:2].long().t()
+     p = data.x[:,0].long()
+ 
+diff --git a/src/dagr/utils/testing.py b/src/dagr/utils/testing.py
+index 9e68e30..726540a 100644
+--- a/src/dagr/utils/testing.py
++++ b/src/dagr/utils/testing.py
+@@ -26,7 +26,8 @@ def run_test_with_visualization(loader, model, dataset: str, log_every_n_batch=-
+     if compile_detections:
+         compiled_detections = []
+ 
+-    for i, data in enumerate(tqdm.tqdm(loader, desc=f"Testing {name}")):
++    # for i, data in enumerate(tqdm.tqdm(loader, desc=f"Testing {name}")):
++    for i, data in enumerate(loader):  
+         data = data.cuda(non_blocking=True)
+         data_for_visualization = data.clone()
+ 

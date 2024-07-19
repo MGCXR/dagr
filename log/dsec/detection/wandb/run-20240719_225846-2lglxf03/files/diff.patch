@@ -1,0 +1,105 @@
+diff --git a/log/dsec/detection/wandb/debug-internal.log b/log/dsec/detection/wandb/debug-internal.log
+index 445f2da..316d960 120000
+--- a/log/dsec/detection/wandb/debug-internal.log
++++ b/log/dsec/detection/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20240719_214702-zpfph57z/logs/debug-internal.log
+\ No newline at end of file
++run-20240719_225846-2lglxf03/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/log/dsec/detection/wandb/debug.log b/log/dsec/detection/wandb/debug.log
+index 66fe573..2bfe0c4 120000
+--- a/log/dsec/detection/wandb/debug.log
++++ b/log/dsec/detection/wandb/debug.log
+@@ -1 +1 @@
+-run-20240719_214702-zpfph57z/logs/debug.log
+\ No newline at end of file
++run-20240719_225846-2lglxf03/logs/debug.log
+\ No newline at end of file
+diff --git a/log/dsec/detection/wandb/latest-run b/log/dsec/detection/wandb/latest-run
+index 5b58e71..8fbc19f 120000
+--- a/log/dsec/detection/wandb/latest-run
++++ b/log/dsec/detection/wandb/latest-run
+@@ -1 +1 @@
+-run-20240719_214702-zpfph57z
+\ No newline at end of file
++run-20240719_225846-2lglxf03
+\ No newline at end of file
+diff --git a/scripts/run_test.py b/scripts/run_test.py
+index 1562c74..5b9775c 100644
+--- a/scripts/run_test.py
++++ b/scripts/run_test.py
+@@ -4,7 +4,7 @@ import torch
+ import wandb
+ os.environ['CUDA_DEVICE_ORDER'] = 'PCI_BUS_ID'
+ 
+-from torch_geometric.data import DataLoader
++from torch_geometric.loader import DataLoader
+ from dagr.utils.args import FLAGS
+ 
+ from dagr.data.dsec_data import DSEC
+@@ -54,7 +54,7 @@ if __name__ == '__main__':
+     ema = ModelEMA(model)
+ 
+     assert "checkpoint" in args
+-    checkpoint = torch.load(args.checkpoint)
++    checkpoint = torch.load(args.checkpoint,weights_only=False)
+     ema.ema.load_state_dict(checkpoint['ema'])
+     ema.ema.cache_luts(radius=args.radius, height=test_dataset.height, width=test_dataset.width)
+ 
+diff --git a/src/dagr/data/dsec_data.py b/src/dagr/data/dsec_data.py
+index d597394..9f82551 100644
+--- a/src/dagr/data/dsec_data.py
++++ b/src/dagr/data/dsec_data.py
+@@ -136,10 +136,12 @@ class DSEC(Dataset):
+         return image
+ 
+     def __getitem__(self, idx):
++
++        print(f"Fetching item with index: {idx}")
+         dataset, image_index_pairs, track_masks, idx = self.rel_index(idx)
+         image_index_0, image_index_1 = image_index_pairs[idx]
+         image_ts_0, image_ts_1 = dataset.images.timestamps[[image_index_0, image_index_1]]
+-
++        print(f"image_index_1: {image_index_1}, track_masks: {track_masks}, dataset.root.name: {self.dataset.root.name}")
+         detections_0 = self.dataset.get_tracks(image_index_0, mask=track_masks, directory_name=dataset.root.name)
+         detections_1 = self.dataset.get_tracks(image_index_1, mask=track_masks, directory_name=dataset.root.name)
+ 
+diff --git a/src/dagr/utils/logging.py b/src/dagr/utils/logging.py
+index d72d172..dd495f3 100644
+--- a/src/dagr/utils/logging.py
++++ b/src/dagr/utils/logging.py
+@@ -8,7 +8,7 @@ from pathlib import PosixPath
+ from pprint import pprint
+ from pathlib import Path
+ 
+-from torch_geometric.data import Data
++from torch_geometric.loader import DataLoader
+ 
+ 
+ def set_up_logging_directory(dataset, task, output_directory):
+@@ -78,7 +78,7 @@ def log_bboxes(data: Batch,
+ 
+     wandb.log({key: image})
+ 
+-def visualize_events(data: Data)->torch.Tensor:
++def visualize_events(data: DataLoader)->torch.Tensor:
+     x, y = data.pos[:,:2].long().t()
+     p = data.x[:,0].long()
+ 
+diff --git a/src/dagr/utils/testing.py b/src/dagr/utils/testing.py
+index 9e68e30..b1d8891 100644
+--- a/src/dagr/utils/testing.py
++++ b/src/dagr/utils/testing.py
+@@ -27,9 +27,11 @@ def run_test_with_visualization(loader, model, dataset: str, log_every_n_batch=-
+         compiled_detections = []
+ 
+     for i, data in enumerate(tqdm.tqdm(loader, desc=f"Testing {name}")):
++        print(f"Batch index: {i}")
+         data = data.cuda(non_blocking=True)
+         data_for_visualization = data.clone()
+ 
++
+         data = format_data(data)
+         detections, targets = model(data.clone())
+ 

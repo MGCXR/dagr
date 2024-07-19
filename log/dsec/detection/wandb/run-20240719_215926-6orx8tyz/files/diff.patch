@@ -1,0 +1,27 @@
+diff --git a/log/dsec/detection/wandb/debug-internal.log b/log/dsec/detection/wandb/debug-internal.log
+index 445f2da..6a4c59f 120000
+--- a/log/dsec/detection/wandb/debug-internal.log
++++ b/log/dsec/detection/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20240719_214702-zpfph57z/logs/debug-internal.log
+\ No newline at end of file
++run-20240719_215926-6orx8tyz/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/log/dsec/detection/wandb/debug.log b/log/dsec/detection/wandb/debug.log
+index 66fe573..28f7e72 120000
+--- a/log/dsec/detection/wandb/debug.log
++++ b/log/dsec/detection/wandb/debug.log
+@@ -1 +1 @@
+-run-20240719_214702-zpfph57z/logs/debug.log
+\ No newline at end of file
++run-20240719_215926-6orx8tyz/logs/debug.log
+\ No newline at end of file
+diff --git a/log/dsec/detection/wandb/latest-run b/log/dsec/detection/wandb/latest-run
+index 5b58e71..4502b47 120000
+--- a/log/dsec/detection/wandb/latest-run
++++ b/log/dsec/detection/wandb/latest-run
+@@ -1 +1 @@
+-run-20240719_214702-zpfph57z
+\ No newline at end of file
++run-20240719_215926-6orx8tyz
+\ No newline at end of file

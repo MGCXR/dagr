@@ -136,10 +136,12 @@ class DSEC(Dataset):
         return image
 
     def __getitem__(self, idx):
+
+        # print(f"Fetching item with index: {idx}")
         dataset, image_index_pairs, track_masks, idx = self.rel_index(idx)
         image_index_0, image_index_1 = image_index_pairs[idx]
         image_ts_0, image_ts_1 = dataset.images.timestamps[[image_index_0, image_index_1]]
-
+        # print(f"image_index_1: {image_index_1}, track_masks: {track_masks}, dataset.root.name: {self.dataset.root.name}")
         detections_0 = self.dataset.get_tracks(image_index_0, mask=track_masks, directory_name=dataset.root.name)
         detections_1 = self.dataset.get_tracks(image_index_1, mask=track_masks, directory_name=dataset.root.name)
 

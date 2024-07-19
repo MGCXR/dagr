@@ -1,0 +1,62 @@
+diff --git a/log/dsec/detection/wandb/debug-internal.log b/log/dsec/detection/wandb/debug-internal.log
+index 445f2da..cf3e791 120000
+--- a/log/dsec/detection/wandb/debug-internal.log
++++ b/log/dsec/detection/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20240719_214702-zpfph57z/logs/debug-internal.log
+\ No newline at end of file
++run-20240719_222610-qjqsz3dx/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/log/dsec/detection/wandb/debug.log b/log/dsec/detection/wandb/debug.log
+index 66fe573..139381e 120000
+--- a/log/dsec/detection/wandb/debug.log
++++ b/log/dsec/detection/wandb/debug.log
+@@ -1 +1 @@
+-run-20240719_214702-zpfph57z/logs/debug.log
+\ No newline at end of file
++run-20240719_222610-qjqsz3dx/logs/debug.log
+\ No newline at end of file
+diff --git a/log/dsec/detection/wandb/latest-run b/log/dsec/detection/wandb/latest-run
+index 5b58e71..68fe303 120000
+--- a/log/dsec/detection/wandb/latest-run
++++ b/log/dsec/detection/wandb/latest-run
+@@ -1 +1 @@
+-run-20240719_214702-zpfph57z
+\ No newline at end of file
++run-20240719_222610-qjqsz3dx
+\ No newline at end of file
+diff --git a/scripts/run_test.py b/scripts/run_test.py
+index 1562c74..5923d97 100644
+--- a/scripts/run_test.py
++++ b/scripts/run_test.py
+@@ -4,7 +4,7 @@ import torch
+ import wandb
+ os.environ['CUDA_DEVICE_ORDER'] = 'PCI_BUS_ID'
+ 
+-from torch_geometric.data import DataLoader
++from torch_geometric.loader import DataLoader
+ from dagr.utils.args import FLAGS
+ 
+ from dagr.data.dsec_data import DSEC
+diff --git a/src/dagr/utils/logging.py b/src/dagr/utils/logging.py
+index d72d172..dd495f3 100644
+--- a/src/dagr/utils/logging.py
++++ b/src/dagr/utils/logging.py
+@@ -8,7 +8,7 @@ from pathlib import PosixPath
+ from pprint import pprint
+ from pathlib import Path
+ 
+-from torch_geometric.data import Data
++from torch_geometric.loader import DataLoader
+ 
+ 
+ def set_up_logging_directory(dataset, task, output_directory):
+@@ -78,7 +78,7 @@ def log_bboxes(data: Batch,
+ 
+     wandb.log({key: image})
+ 
+-def visualize_events(data: Data)->torch.Tensor:
++def visualize_events(data: DataLoader)->torch.Tensor:
+     x, y = data.pos[:,:2].long().t()
+     p = data.x[:,0].long()
+ 
