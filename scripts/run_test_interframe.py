@@ -4,7 +4,7 @@ import wandb
 import os
 os.environ['CUDA_DEVICE_ORDER'] = 'PCI_BUS_ID'
 
-from torch_geometric.data import DataLoader
+from torch_geometric.loader import DataLoader
 from pprint import pprint
 
 from dagr.utils.logging import set_up_logging_directory, log_hparams
@@ -74,7 +74,7 @@ if __name__ == '__main__':
     ema = ModelEMA(model)
 
     assert "checkpoint" in args
-    checkpoint = torch.load(args.checkpoint)
+    checkpoint = torch.load(args.checkpoint,weights_only=False)
     ema.ema.load_state_dict(checkpoint['ema'])
     ema.ema.cache_luts(radius=args.radius, height=test_dataset.height, width=test_dataset.width)
 

@@ -1,0 +1,49 @@
+diff --git a/log/dsec/detection/wandb/debug-internal.log b/log/dsec/detection/wandb/debug-internal.log
+index c6bc5a2..884f749 120000
+--- a/log/dsec/detection/wandb/debug-internal.log
++++ b/log/dsec/detection/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20240719_235547-bnzylob1/logs/debug-internal.log
+\ No newline at end of file
++run-20240720_142728-o7jid52s/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/log/dsec/detection/wandb/debug.log b/log/dsec/detection/wandb/debug.log
+index d4a91f0..e584922 120000
+--- a/log/dsec/detection/wandb/debug.log
++++ b/log/dsec/detection/wandb/debug.log
+@@ -1 +1 @@
+-run-20240719_235547-bnzylob1/logs/debug.log
+\ No newline at end of file
++run-20240720_142728-o7jid52s/logs/debug.log
+\ No newline at end of file
+diff --git a/log/dsec/detection/wandb/latest-run b/log/dsec/detection/wandb/latest-run
+index 9f110c8..d67a0af 120000
+--- a/log/dsec/detection/wandb/latest-run
++++ b/log/dsec/detection/wandb/latest-run
+@@ -1 +1 @@
+-run-20240719_235547-bnzylob1
+\ No newline at end of file
++run-20240720_142728-o7jid52s
+\ No newline at end of file
+diff --git a/scripts/run_test_interframe.py b/scripts/run_test_interframe.py
+index 7d653d9..2c65179 100644
+--- a/scripts/run_test_interframe.py
++++ b/scripts/run_test_interframe.py
+@@ -4,7 +4,7 @@ import wandb
+ import os
+ os.environ['CUDA_DEVICE_ORDER'] = 'PCI_BUS_ID'
+ 
+-from torch_geometric.data import DataLoader
++from torch_geometric.loader import DataLoader
+ from pprint import pprint
+ 
+ from dagr.utils.logging import set_up_logging_directory, log_hparams
+@@ -74,7 +74,7 @@ if __name__ == '__main__':
+     ema = ModelEMA(model)
+ 
+     assert "checkpoint" in args
+-    checkpoint = torch.load(args.checkpoint)
++    checkpoint = torch.load(args.checkpoint,weights_only=False)
+     ema.ema.load_state_dict(checkpoint['ema'])
+     ema.ema.cache_luts(radius=args.radius, height=test_dataset.height, width=test_dataset.width)
+ 
