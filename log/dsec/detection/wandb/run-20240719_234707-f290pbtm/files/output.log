@@ -1,0 +1,241 @@
+PROJECT: low_latency-dsec-detection
+{'activation': 'relu',
+ 'after_pool_width': 1,
+ 'aggr': 'sum',
+ 'aug_p_flip': 0.5,
+ 'aug_trans': 0.1,
+ 'aug_zoom': 1.5,
+ 'base_width': 0.5,
+ 'batch_size': 4,
+ 'checkpoint': 'data/dagr_s_50.pth',
+ 'clip': 0.1,
+ 'config': 'config/dagr-s-dsec.yaml',
+ 'dataset': 'dsec',
+ 'dataset_directory': '/data/wzk',
+ 'edge_attr_dim': 2,
+ 'img_net': 'resnet50',
+ 'keep_temporal_ordering': False,
+ 'kernel_size': 5,
+ 'l_r': 0.0002,
+ 'max_neighbors': 16,
+ 'n_nodes': 50000,
+ 'net_stem_width': 0.5,
+ 'no_eval': False,
+ 'no_events': False,
+ 'num_interframe_steps': 10,
+ 'num_scales': 2,
+ 'output_directory': 'log',
+ 'pooling_aggr': 'max',
+ 'pooling_dim_at_output': '5x7',
+ 'radius': 0.01,
+ 'run_test': False,
+ 'task': 'detection',
+ 'time_window_us': 1000000,
+ 'tot_num_epochs': 801,
+ 'use_image': True,
+ 'weight_decay': 1e-05,
+ 'yolo_stem_width': 0.5}
+init datasets
+init net
+/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torch/functional.py:534: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3595.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Index: 89, Number of indices: 577
+Assertion passed for index: 89
+Index: 90, Number of indices: 577
+Assertion passed for index: 90
+Index: 89, Number of indices: 577
+Assertion passed for index: 89
+Index: 960, Number of indices: 3901
+Assertion passed for index: 960
+Index: 961, Number of indices: 3901
+Assertion passed for index: 961
+Index: 960, Number of indices: 3901
+Assertion passed for index: 960
+Index: 1061, Number of indices: 2263
+Assertion passed for index: 1061
+Index: 1062, Number of indices: 2263
+Assertion passed for index: 1062
+Index: 1061, Number of indices: 2263
+Assertion passed for index: 1061
+Index: 619, Number of indices: 1143
+Assertion passed for index: 619
+Index: 620, Number of indices: 1143
+Assertion passed for index: 620
+Index: 619, Number of indices: 1143
+Assertion passed for index: 619
+Index: 1029, Number of indices: 1143
+Assertion passed for index: 1029
+Index: 1030, Number of indices: 1143
+Assertion passed for index: 1030
+Index: 1029, Number of indices: 1143
+Assertion passed for index: 1029
+Testing :   0%|                                                                                                                               | 1/3032 [00:01<1:18:37,  1.56s/it]
+Index: 76, Number of indices: 577
+Assertion passed for index: 76
+Index: 77, Number of indices: 577
+Assertion passed for index: 77
+Index: 76, Number of indices: 577
+Assertion passed for index: 76
+Index: 1877, Number of indices: 2263
+Assertion passed for index: 1877
+Index: 1878, Number of indices: 2263
+Assertion passed for index: 1878
+Index: 1877, Number of indices: 2263
+Assertion passed for index: 1877
+Index: 1114, Number of indices: 1191
+Assertion passed for index: 1114
+Index: 1115, Number of indices: 1191
+Assertion passed for index: 1115
+Index: 1114, Number of indices: 1191
+Assertion passed for index: 1114
+Index: 2497, Number of indices: 3901
+Assertion passed for index: 2497
+Index: 2498, Number of indices: 3901
+Assertion passed for index: 2498
+Index: 2497, Number of indices: 3901
+Assertion passed for index: 2497
+Index: 185, Number of indices: 1143
+Assertion passed for index: 185
+Index: 186, Number of indices: 1143
+Assertion passed for index: 186
+Index: 185, Number of indices: 1143
+Assertion passed for index: 185
+Index: 1185, Number of indices: 1191
+Assertion passed for index: 1185
+Index: 1186, Number of indices: 1191
+Assertion passed for index: 1186
+Index: 1185, Number of indices: 1191
+Assertion passed for index: 1185
+Index: 875, Number of indices: 1079
+Assertion passed for index: 875
+Index: 876, Number of indices: 1079
+Assertion passed for index: 876
+Index: 875, Number of indices: 1079
+
+Testing :   0%|                                                                                                                               | 2/3032 [00:02<1:10:43,  1.40s/it]
+Index: 265, Number of indices: 1143
+Assertion passed for index: 265
+Index: 266, Number of indices: 1143
+Assertion passed for index: 266
+Index: 265, Number of indices: 1143
+Assertion passed for index: 265
+Index: 2894, Number of indices: 3901
+Assertion passed for index: 2894
+Index: 2895, Number of indices: 3901
+Assertion passed for index: 2895
+Index: 2894, Number of indices: 3901
+Assertion passed for index: 2894
+Index: 99, Number of indices: 1079
+Assertion passed for index: 99
+Index: 100, Number of indices: 1079
+Assertion passed for index: 100
+Index: 99, Number of indices: 1079
+Assertion passed for index: 99
+Index: 1707, Number of indices: 2263
+Assertion passed for index: 1707
+Index: 1708, Number of indices: 2263
+Assertion passed for index: 1708
+Index: 1707, Number of indices: 2263
+Assertion passed for index: 1707
+Index: 2085, Number of indices: 3901
+Assertion passed for index: 2085
+Index: 2086, Number of indices: 3901
+
+Testing :   0%|▏                                                                                                                              | 4/3032 [00:05<1:08:33,  1.36s/it]
+Index: 2085, Number of indices: 3901
+Assertion passed for index: 2085
+Index: 2108, Number of indices: 2263
+Assertion passed for index: 2108
+Index: 2109, Number of indices: 2263
+Assertion passed for index: 2109
+Index: 2108, Number of indices: 2263
+Assertion passed for index: 2108
+Index: 685, Number of indices: 1617
+Assertion passed for index: 685
+Index: 686, Number of indices: 1617
+Assertion passed for index: 686
+Index: 685, Number of indices: 1617
+Assertion passed for index: 685
+Index: 2077, Number of indices: 2263
+Assertion passed for index: 2077
+Index: 2078, Number of indices: 2263
+Assertion passed for index: 2078
+Index: 2077, Number of indices: 2263
+Assertion passed for index: 2077
+Index: 96, Number of indices: 197
+Assertion passed for index: 96
+Index: 97, Number of indices: 197
+Assertion passed for index: 97
+Index: 96, Number of indices: 197
+Assertion passed for index: 96
+Index: 200, Number of indices: 1239
+Assertion passed for index: 200
+Index: 201, Number of indices: 1239
+Assertion passed for index: 201
+Index: 200, Number of indices: 1239
+
+Testing :   0%|▏                                                                                                                              | 5/3032 [00:07<1:16:49,  1.52s/it]
+Index: 225, Number of indices: 1617
+Assertion passed for index: 225
+Index: 226, Number of indices: 1617
+Assertion passed for index: 226
+Index: 225, Number of indices: 1617
+Assertion passed for index: 225
+Index: 301, Number of indices: 439
+Assertion passed for index: 301
+Index: 302, Number of indices: 439
+Assertion passed for index: 302
+Index: 301, Number of indices: 439
+Assertion passed for index: 301
+Index: 3868, Number of indices: 3901
+Assertion passed for index: 3868
+Index: 3869, Number of indices: 3901
+Assertion passed for index: 3869
+Index: 3868, Number of indices: 3901
+Assertion passed for index: 3868
+Index: 1265, Number of indices: 3901
+Assertion passed for index: 1265
+Index: 1266, Number of indices: 3901
+Assertion passed for index: 1266
+Index: 1265, Number of indices: 3901
+Assertion passed for index: 1265
+Index: 749, Number of indices: 1239
+Assertion passed for index: 749
+Index: 750, Number of indices: 1239
+Assertion passed for index: 750
+Index: 749, Number of indices: 1239
+Assertion passed for index: 749
+Index: 776, Number of indices: 1191
+Assertion passed for index: 776
+Index: 777, Number of indices: 1191
+Assertion passed for index: 777
+Index: 776, Number of indices: 1191
+Testing :   0%|▎                                                                                                                              | 7/3032 [00:09<1:10:54,  1.41s/it]
+Traceback (most recent call last):
+  File "scripts/run_test.py", line 62, in <module>
+    metrics = run_test_with_visualization(test_loader, ema.ema, dataset=args.dataset)
+  File "/home/mlc/dagr/src/dagr/utils/testing.py", line 29, in run_test_with_visualization
+    for i, data in enumerate(tqdm.tqdm(loader, desc=f"Testing {name}")):
+  File "/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 701, in __next__
+    data = self._next_data()
+  File "/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 757, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/mlc/dagr/src/dagr/data/dsec_data.py", line 146, in __getitem__
+    detections_1 = self.dataset.get_tracks(image_index_1, mask=track_masks, directory_name=dataset.root.name)
+  File "/home/mlc/dagr/libs/dsec-det/src/dsec_det/dataset.py", line 110, in get_tracks
+    i_0, i_1 = self.get_index_window(index, len(img_idx_to_track_idx), sync=self.sync)
+  File "/home/mlc/dagr/libs/dsec-det/src/dsec_det/dataset.py", line 105, in get_index_window
+    return i_0, i_1
+UnboundLocalError: local variable 'i_0' referenced before assignment
+Index: 1141, Number of indices: 1143
+Assertion passed for index: 1141

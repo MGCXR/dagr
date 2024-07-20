@@ -3,7 +3,7 @@ import tqdm
 import torch
 os.environ['CUDA_DEVICE_ORDER'] = 'PCI_BUS_ID'
 
-from torch_geometric.data import DataLoader
+from torch_geometric.loader import DataLoader
 
 from dagr.utils.args import FLOPS_FLAGS
 from dagr.utils.buffers import DictBuffer, format_data
@@ -40,7 +40,7 @@ if __name__ == '__main__':
     pbar.update(1)
 
     assert "checkpoint" in args
-    checkpoint = torch.load(args.checkpoint)
+    checkpoint = torch.load(args.checkpoint, weights_only=False)
     model.load_state_dict(checkpoint['ema'])
     pbar.update(1)
 

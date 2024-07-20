@@ -45,7 +45,7 @@ if __name__ == '__main__':
     num_iters_per_epoch = 1
 
     sampler = np.random.permutation(np.arange(len(test_dataset)))
-    test_loader = DataLoader(test_dataset, sampler=sampler, follow_batch=['bbox', 'bbox0'], batch_size=args.batch_size, shuffle=False, num_workers=0, drop_last=True)
+    test_loader = DataLoader(test_dataset, sampler=sampler, follow_batch=['bbox', 'bbox0'], batch_size=args.batch_size, shuffle=False, num_workers=4, drop_last=True)
 
     print("init net")
     # load a dummy sample to get height, width

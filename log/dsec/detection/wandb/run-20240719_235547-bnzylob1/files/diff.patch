@@ -1,0 +1,40 @@
+diff --git a/log/dsec/detection/wandb/debug-internal.log b/log/dsec/detection/wandb/debug-internal.log
+index d8debaf..c6bc5a2 120000
+--- a/log/dsec/detection/wandb/debug-internal.log
++++ b/log/dsec/detection/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20240719_233040-t3rabtus/logs/debug-internal.log
+\ No newline at end of file
++run-20240719_235547-bnzylob1/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/log/dsec/detection/wandb/debug.log b/log/dsec/detection/wandb/debug.log
+index 1e4bec7..d4a91f0 120000
+--- a/log/dsec/detection/wandb/debug.log
++++ b/log/dsec/detection/wandb/debug.log
+@@ -1 +1 @@
+-run-20240719_233040-t3rabtus/logs/debug.log
+\ No newline at end of file
++run-20240719_235547-bnzylob1/logs/debug.log
+\ No newline at end of file
+diff --git a/log/dsec/detection/wandb/latest-run b/log/dsec/detection/wandb/latest-run
+index 19fd933..9f110c8 120000
+--- a/log/dsec/detection/wandb/latest-run
++++ b/log/dsec/detection/wandb/latest-run
+@@ -1 +1 @@
+-run-20240719_233040-t3rabtus
+\ No newline at end of file
++run-20240719_235547-bnzylob1
+\ No newline at end of file
+diff --git a/scripts/run_test.py b/scripts/run_test.py
+index 5131f7d..5b9775c 100644
+--- a/scripts/run_test.py
++++ b/scripts/run_test.py
+@@ -45,7 +45,7 @@ if __name__ == '__main__':
+     num_iters_per_epoch = 1
+ 
+     sampler = np.random.permutation(np.arange(len(test_dataset)))
+-    test_loader = DataLoader(test_dataset, sampler=sampler, follow_batch=['bbox', 'bbox0'], batch_size=args.batch_size, shuffle=False, num_workers=0, drop_last=True)
++    test_loader = DataLoader(test_dataset, sampler=sampler, follow_batch=['bbox', 'bbox0'], batch_size=args.batch_size, shuffle=False, num_workers=4, drop_last=True)
+ 
+     print("init net")
+     # load a dummy sample to get height, width
