@@ -1,0 +1,257 @@
+{'activation': 'relu',
+ 'after_pool_width': 1,
+ 'aggr': 'sum',
+ 'aug_p_flip': 0.5,
+ 'aug_trans': 0.1,
+ 'aug_zoom': 1.5,
+ 'base_width': 0.5,
+ 'batch_size': 2,
+ 'checkpoint': 'data/dagr_s_50.pth',
+ 'clip': 0.1,
+ 'config': 'config/dagr-s-dsec.yaml',
+ 'dataset': 'dsec',
+ 'dataset_directory': '/data/dsec',
+ 'edge_attr_dim': 2,
+ 'img_net': 'resnet50',
+ 'keep_temporal_ordering': False,
+ 'kernel_size': 5,
+ 'l_r': 0.0002,
+ 'max_neighbors': 16,
+ 'n_nodes': 50000,
+ 'net_stem_width': 0.5,
+ 'no_eval': False,
+ 'no_events': False,
+ 'num_interframe_steps': 10,
+ 'num_scales': 2,
+ 'output_directory': 'log',
+ 'pooling_aggr': 'max',
+ 'pooling_dim_at_output': '5x7',
+ 'radius': 0.01,
+ 'run_test': False,
+ 'task': 'detection',
+ 'time_window_us': 1000000,
+ 'tot_num_epochs': 801,
+ 'use_image': True,
+ 'weight_decay': 1e-05,
+ 'yolo_stem_width': 0.5}
+init datasets
+/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+init net
+/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torch/functional.py:534: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3595.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Testing volcanic-shape-51:   0%|                                                                                                                                                        | 1/4990 [00:00<1:07:29,  1.23it/s]
+len detections_0 lens:  2
+len detections_1 lens:  2
+Detections 0:  [(39549450395, 116.5, 92.5, 31., 18., 0, 0.997006  , 1)
+ (39549450395,   0. , 87.5, 69., 28., 0, 0.95645076, 7)]
+Detections 1:  [(39549500397, 116.5, 92.5, 32. , 19. , 0, 0.99663925, 1)
+ (39549500397,   0. , 86.5, 68.5, 29.5, 0, 0.9650079 , 7)]
+len detections_0 lens:  2
+len detections_1 lens:  2
+Detections 0:  [(39549500397, 116.5, 92.5, 32. , 19. , 0, 0.99663925, 1)
+ (39549500397,   0. , 86.5, 68.5, 29.5, 0, 0.9650079 , 7)]
+Detections 1:  [(39549550394, 116.5, 93.5, 32., 18. , 0, 0.9975426, 1)
+ (39549550394,   0. , 86.5, 67., 28.5, 0, 0.9536142, 7)]
+len detections_0 lens:  2
+len detections_1 lens:  2
+Detections 0:  [(39549550394, 116.5, 93.5, 32., 18. , 0, 0.9975426, 1)
+ (39549550394,   0. , 86.5, 67., 28.5, 0, 0.9536142, 7)]
+Detections 1:  [(39549600395, 116., 93.5, 32.5, 18. , 0, 0.9973876 , 1)
+ (39549600395,   0., 86.5, 65.5, 28.5, 0, 0.95270383, 7)]
+len detections_0 lens:  2
+len detections_1 lens:  2
+Detections 0:  [(39549600395, 116., 93.5, 32.5, 18. , 0, 0.9973876 , 1)
+ (39549600395,   0., 86.5, 65.5, 28.5, 0, 0.95270383, 7)]
+Detections 1:  [(39549650396, 115., 92.5, 32.5, 19. , 0, 0.9972697 , 1)
+ (39549650396,   0., 86.5, 63.5, 28.5, 0, 0.96175146, 7)]
+len detections_0 lens:  2
+len detections_1 lens:  2
+Detections 0:  [(39549650396, 115., 92.5, 32.5, 19. , 0, 0.9972697 , 1)
+ (39549650396,   0., 86.5, 63.5, 28.5, 0, 0.96175146, 7)]
+Detections 1:  [(39549700393, 115., 92.5, 32.5, 19., 0, 0.997881  , 1)
+ (39549700393,   0., 85.5, 63. , 30., 0, 0.96693593, 7)]
+len detections_0 lens:  2
+len detections_1 lens:  2
+Detections 0:  [(39549700393, 115., 92.5, 32.5, 19., 0, 0.997881  , 1)
+ (39549700393,   0., 85.5, 63. , 30., 0, 0.96693593, 7)]
+Detections 1:  [(39549750395, 114., 92.5, 33.5, 19. , 0, 0.99867886, 1)
+ (39549750395,   0., 85.5, 62.5, 31.5, 0, 0.9774955 , 7)]
+len detections_0 lens:  2
+len detections_1 lens:  2
+Detections 0:  [(39549750395, 114., 92.5, 33.5, 19. , 0, 0.99867886, 1)
+ (39549750395,   0., 85.5, 62.5, 31.5, 0, 0.9774955 , 7)]
+Detections 1:  [(39549800396, 114.5, 92. , 33. , 19. , 0, 0.998811 , 1)
+ (39549800396,   0. , 84.5, 60.5, 30.5, 0, 0.9832365, 7)]
+len detections_0 lens:  2
+len detections_1 lens:  2
+Detections 0:  [(39549800396, 114.5, 92. , 33. , 19. , 0, 0.998811 , 1)
+ (39549800396,   0. , 84.5, 60.5, 30.5, 0, 0.9832365, 7)]
+Detections 1:  [(39549850413, 114.5, 92., 33., 18. , 0, 0.9983   , 1)
+ (39549850413,   0. , 82., 58., 32.5, 0, 0.9883809, 7)]
+len detections_0 lens:  2
+len detections_1 lens:  2
+Detections 0:  [(39549850413, 114.5, 92., 33., 18. , 0, 0.9983   , 1)
+ (39549850413,   0. , 82., 58., 32.5, 0, 0.9883809, 7)]
+Detections 1:  [(39549900417, 114., 91.5, 33.5, 19. , 0, 0.9981993 , 1)
+ (39549900417,   0., 83.5, 57. , 31.5, 0, 0.99166733, 7)]
+len detections_0 lens:  2
+len detections_1 lens:  2
+Detections 0:  [(39549900417, 114., 91.5, 33.5, 19. , 0, 0.9981993 , 1)
+ (39549900417,   0., 83.5, 57. , 31.5, 0, 0.99166733, 7)]
+Detections 1:  [(39549950421, 114., 91.5, 33.5, 19. , 0, 0.9968374, 1)
+ (39549950421,   0., 83.5, 55.5, 32.5, 0, 0.9932487, 7)]
+len detections_0 lens:  2
+len detections_1 lens:  2
+Detections 0:  [(39549950421, 114., 91.5, 33.5, 19. , 0, 0.9968374, 1)
+ (39549950421,   0., 83.5, 55.5, 32.5, 0, 0.9932487, 7)]
+Detections 1:  [(39550000352, 114., 90.5, 33.5, 19.5, 0, 0.99680424, 1)
+ (39550000352,   0., 82.5, 55. , 34. , 0, 0.99605393, 7)]
+len detections_0 lens:  2
+len detections_1 lens:  2
+Detections 0:  [(39550000352, 114., 90.5, 33.5, 19.5, 0, 0.99680424, 1)
+ (39550000352,   0., 82.5, 55. , 34. , 0, 0.99605393, 7)]
+Detections 1:  [(39550050386, 114., 91.5, 33.5, 19.5, 0, 0.9970385, 1)
+ (39550050386,   0., 82.5, 53.5, 33.5, 0, 0.989917 , 7)]
+len detections_0 lens:  2
+len detections_1 lens:  2
+Detections 0:  [(39550050386, 114., 91.5, 33.5, 19.5, 0, 0.9970385, 1)
+ (39550050386,   0., 82.5, 53.5, 33.5, 0, 0.989917 , 7)]
+Detections 1:  [(39550100405, 113.5, 91.5, 33.5, 20., 0, 0.99777395, 1)
+ (39550100405,   0. , 82.5, 50. , 34., 0, 0.9930033 , 7)]
+len detections_0 lens:  2
+len detections_1 lens:  2
+Detections 0:  [(39550100405, 113.5, 91.5, 33.5, 20., 0, 0.99777395, 1)
+ (39550100405,   0. , 82.5, 50. , 34., 0, 0.9930033 , 7)]
+Detections 1:  [(39550150398, 113.5, 92. , 33.5, 19.5, 0, 0.9976736, 1)
+Testing volcanic-shape-51:   0%|▍                                                                                                                                                        | 15/4990 [00:02<13:04,  6.34it/s]
+Traceback (most recent call last):
+  File "scripts/run_test_interframe.py", line 85, in <module>
+    metrics, detections_one_offset = run_test_with_visualization(test_loader, ema.ema, dataset=args.dataset, name=wandb.run.name, compile_detections=True,
+  File "/home/mlc/dagr/src/dagr/utils/testing.py", line 29, in run_test_with_visualization
+    for i, data in enumerate(tqdm.tqdm(loader, desc=f"Testing {name}")):
+  File "/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 701, in __next__
+    data = self._next_data()
+  File "/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 757, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/mlc/dagr/src/dagr/data/dsec_data.py", line 174, in __getitem__
+    detections_1 = interpolate_tracks(detections_0, detections_1, image_ts_1)
+  File "/home/mlc/dagr/src/dagr/data/dsec_data.py", line 30, in interpolate_tracks
+    assert len(detections_1) == len(detections_0)
+AssertionError
+len detections_0 lens:  2
+len detections_1 lens:  2
+Detections 0:  [(39550150398, 113.5, 92. , 33.5, 19.5, 0, 0.9976736, 1)
+ (39550150398,   0. , 82.5, 49.5, 36. , 0, 0.9949633, 7)]
+Detections 1:  [(39550200399, 112.5, 92.5, 34.5, 20., 0, 0.99492776, 1)
+ (39550200399,   0. , 83.5, 49.5, 35., 0, 0.9924777 , 7)]
+len detections_0 lens:  2
+len detections_1 lens:  2
+Detections 0:  [(39550200399, 112.5, 92.5, 34.5, 20., 0, 0.99492776, 1)
+ (39550200399,   0. , 83.5, 49.5, 35., 0, 0.9924777 , 7)]
+Detections 1:  [(39550250396, 113.5, 92.5, 33.5, 20. , 0, 0.99677855, 1)
+ (39550250396,   0. , 82.5, 48. , 36.5, 0, 0.9950336 , 7)]
+len detections_0 lens:  2
+len detections_1 lens:  2
+Detections 0:  [(39550250396, 113.5, 92.5, 33.5, 20. , 0, 0.99677855, 1)
+ (39550250396,   0. , 82.5, 48. , 36.5, 0, 0.9950336 , 7)]
+Detections 1:  [(39550300393,   0., 81.5, 47., 38., 0, 0.9931062 , 7)
+ (39550300393, 112., 93.5, 35., 20., 0, 0.98979086, 1)]
+len detections_0 lens:  2
+len detections_1 lens:  2
+Detections 0:  [(39550300393,   0., 81.5, 47., 38., 0, 0.9931062 , 7)
+ (39550300393, 112., 93.5, 35., 20., 0, 0.98979086, 1)]
+Detections 1:  [(39550350399,   0. , 80.5, 43.5, 40., 0, 0.99539316, 7)
+ (39550350399, 110.5, 93.5, 36.5, 20., 0, 0.98617744, 1)]
+len detections_0 lens:  2
+len detections_1 lens:  2
+Detections 0:  [(39550350399,   0. , 80.5, 43.5, 40., 0, 0.99539316, 7)
+ (39550350399, 110.5, 93.5, 36.5, 20., 0, 0.98617744, 1)]
+Detections 1:  [(39550400396,   0., 80.5, 41.5, 40.5, 0, 0.9906625, 7)
+ (39550400396, 110., 92.5, 37. , 21. , 0, 0.9887017, 1)]
+len detections_0 lens:  2
+len detections_1 lens:  2
+Detections 0:  [(39550400396,   0., 80.5, 41.5, 40.5, 0, 0.9906625, 7)
+ (39550400396, 110., 92.5, 37. , 21. , 0, 0.9887017, 1)]
+Detections 1:  [(39550450397, 109.5, 92.5, 37., 21.5, 0, 0.9912111 , 1)
+ (39550450397,   0. , 81.5, 40., 40.5, 0, 0.99072874, 7)]
+len detections_0 lens:  2
+len detections_1 lens:  2
+Detections 0:  [(39550450397, 109.5, 92.5, 37., 21.5, 0, 0.9912111 , 1)
+ (39550450397,   0. , 81.5, 40., 40.5, 0, 0.99072874, 7)]
+Detections 1:  [(39550500400, 108.5, 92.5, 37., 21.5, 0, 0.9923585 , 1)
+ (39550500400,   0. , 82. , 38., 40.5, 0, 0.99091196, 7)]
+len detections_0 lens:  2
+len detections_1 lens:  2
+Detections 0:  [(39550500400, 108.5, 92.5, 37., 21.5, 0, 0.9923585 , 1)
+ (39550500400,   0. , 82. , 38., 40.5, 0, 0.99091196, 7)]
+Detections 1:  [(39550550402, 108., 93.5, 38.5, 21., 0, 0.9947403, 1)
+ (39550550402,   0., 82. , 34. , 41., 0, 0.9907376, 7)]
+len detections_0 lens:  2
+len detections_1 lens:  2
+Detections 0:  [(39550550402, 108., 93.5, 38.5, 21., 0, 0.9947403, 1)
+ (39550550402,   0., 82. , 34. , 41., 0, 0.9907376, 7)]
+Detections 1:  [(39550600405, 107.5, 93.5, 37.5, 21. , 0, 0.99418193, 1)
+ (39550600405,   0. , 82. , 32.5, 41.5, 0, 0.9913087 , 7)]
+len detections_0 lens:  2
+len detections_1 lens:  2
+Detections 0:  [(39550600405, 107.5, 93.5, 37.5, 21. , 0, 0.99418193, 1)
+ (39550600405,   0. , 82. , 32.5, 41.5, 0, 0.9913087 , 7)]
+Detections 1:  [(39550650408, 106., 94. , 39. , 21.5, 0, 0.98745805, 1)
+ (39550650408,   0., 81.5, 29.5, 41. , 0, 0.9849979 , 7)]
+len detections_0 lens:  2
+len detections_1 lens:  2
+Detections 0:  [(39550650408, 106., 94. , 39. , 21.5, 0, 0.98745805, 1)
+ (39550650408,   0., 81.5, 29.5, 41. , 0, 0.9849979 , 7)]
+Detections 1:  [(39550700408, 105., 94., 39., 22., 0, 0.9927811, 1)
+ (39550700408,   0., 82., 28., 41., 0, 0.9720641, 7)]
+len detections_0 lens:  2
+len detections_1 lens:  2
+Detections 0:  [(39550700408, 105., 94., 39., 22., 0, 0.9927811, 1)
+ (39550700408,   0., 82., 28., 41., 0, 0.9720641, 7)]
+Detections 1:  [(39550750409, 105.5, 94. , 38.5, 22. , 0, 0.9889269 , 1)
+ (39550750409,   0. , 82.5, 24.5, 41.5, 0, 0.97670525, 7)]
+len detections_0 lens:  2
+len detections_1 lens:  2
+Detections 0:  [(39550750409, 105.5, 94. , 38.5, 22. , 0, 0.9889269 , 1)
+ (39550750409,   0. , 82.5, 24.5, 41.5, 0, 0.97670525, 7)]
+Detections 1:  [(39550800410, 106., 94.5, 37.5, 22. , 0, 0.9915827 , 1)
+ (39550800410,   0., 81.5, 22.5, 43.5, 0, 0.98549104, 7)]
+len detections_0 lens:  2
+len detections_1 lens:  2
+Detections 0:  [(39550800410, 106., 94.5, 37.5, 22. , 0, 0.9915827 , 1)
+ (39550800410,   0., 81.5, 22.5, 43.5, 0, 0.98549104, 7)]
+Detections 1:  [(39550850415, 105.5, 94.5, 38.5, 22., 0, 0.9940528, 1)
+ (39550850415,   0. , 82. , 19.5, 43., 0, 0.9836495, 7)]
+len detections_0 lens:  2
+len detections_1 lens:  2
+Detections 0:  [(39550850415, 105.5, 94.5, 38.5, 22., 0, 0.9940528, 1)
+ (39550850415,   0. , 82. , 19.5, 43., 0, 0.9836495, 7)]
+Detections 1:  [(39550900417, 104., 94. , 39. , 23., 0, 0.9937419 , 1)
+ (39550900417,   0., 82.5, 15.5, 43., 0, 0.98917484, 7)]
+len detections_0 lens:  2
+len detections_1 lens:  2
+Detections 0:  [(39550900417, 104., 94. , 39. , 23., 0, 0.9937419 , 1)
+ (39550900417,   0., 82.5, 15.5, 43., 0, 0.98917484, 7)]
+Detections 1:  [(39550950424, 102., 93.5, 41., 23., 0, 0.9901972, 1)
+ (39550950424,   0., 82.5, 13., 43., 0, 0.9888249, 7)]
+len detections_0 lens:  2
+len detections_1 lens:  1
+image_index_0:  30
+image_index_1:  31
+track_masks:  [False  True  True ...  True  True  True]
+dataset.root.name:  zurich_city_15_a
+Detections 0:  [(39550950424, 204., 187., 82., 46., 4, 0.9901972, 1)
+ (39550950424, -16., 165., 42., 86., 4, 0.9888249, 7)]
+Detections 1:  [(39551000368, 203., 185., 83., 46., 4, 0.9944971, 1)]
+Detections 0:  [(39550950424, 102., 93.5, 41., 23., 0, 0.9901972, 1)
+ (39550950424,   0., 82.5, 13., 43., 0, 0.9888249, 7)]
+Detections 1:  [(39551000368, 101.5, 92.5, 41.5, 23., 0, 0.9944971, 1)]

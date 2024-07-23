@@ -1,0 +1,65 @@
+diff --git a/log/dsec/detection/wandb/debug-internal.log b/log/dsec/detection/wandb/debug-internal.log
+index 884f749..321201d 120000
+--- a/log/dsec/detection/wandb/debug-internal.log
++++ b/log/dsec/detection/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20240720_142728-o7jid52s/logs/debug-internal.log
+\ No newline at end of file
++run-20240723_194601-2ns9uuhm/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/log/dsec/detection/wandb/debug.log b/log/dsec/detection/wandb/debug.log
+index e584922..285d7e6 120000
+--- a/log/dsec/detection/wandb/debug.log
++++ b/log/dsec/detection/wandb/debug.log
+@@ -1 +1 @@
+-run-20240720_142728-o7jid52s/logs/debug.log
+\ No newline at end of file
++run-20240723_194601-2ns9uuhm/logs/debug.log
+\ No newline at end of file
+diff --git a/log/dsec/detection/wandb/latest-run b/log/dsec/detection/wandb/latest-run
+index d67a0af..1f7fcac 120000
+--- a/log/dsec/detection/wandb/latest-run
++++ b/log/dsec/detection/wandb/latest-run
+@@ -1 +1 @@
+-run-20240720_142728-o7jid52s
+\ No newline at end of file
++run-20240723_194601-2ns9uuhm
+\ No newline at end of file
+diff --git a/log/flops_per_layer.pth b/log/flops_per_layer.pth
+index c2c3972..00a71d0 100644
+Binary files a/log/flops_per_layer.pth and b/log/flops_per_layer.pth differ
+diff --git a/src/dagr/data/dsec_data.py b/src/dagr/data/dsec_data.py
+index e3ec382..ac1b977 100644
+--- a/src/dagr/data/dsec_data.py
++++ b/src/dagr/data/dsec_data.py
+@@ -24,6 +24,9 @@ def tracks_to_array(tracks):
+ 
+ 
+ def interpolate_tracks(detections_0, detections_1, t):
++    # print("detections_0 lens: ", len(detections_0))
++    # print("detections_1 lens: ", len(detections_1))
++    
+     assert len(detections_1) == len(detections_0)
+     if len(detections_0) == 0:
+         return detections_1
+@@ -144,9 +147,20 @@ class DSEC(Dataset):
+         # print(f"image_index_1: {image_index_1}, track_masks: {track_masks}, dataset.root.name: {self.dataset.root.name}")
+         detections_0 = self.dataset.get_tracks(image_index_0, mask=track_masks, directory_name=dataset.root.name)
+         detections_1 = self.dataset.get_tracks(image_index_1, mask=track_masks, directory_name=dataset.root.name)
++        print("len detections_0 lens: ", len(detections_0))
++        print("len detections_1 lens: ", len(detections_1))
++        if len(detections_1) == 1:
++            print("image_index_0: ", image_index_0)
++            print("image_index_1: ", image_index_1)
++            print("track_masks: ", track_masks)
++            print("dataset.root.name: ", dataset.root.name)
++            print("Detections 0: ", detections_0)
++            print("Detections 1: ", detections_1)
+ 
+         detections_0 = self.preprocess_detections(detections_0)
+         detections_1 = self.preprocess_detections(detections_1)
++        print("Detections 0: ", detections_0)
++        print("Detections 1: ", detections_1)
+ 
+         image_0 = self.dataset.get_image(image_index_0, directory_name=dataset.root.name)
+         image_0 = self.preprocess_image(image_0)

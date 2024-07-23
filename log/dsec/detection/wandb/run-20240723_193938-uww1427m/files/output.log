@@ -1,0 +1,165 @@
+{'activation': 'relu',
+ 'after_pool_width': 1,
+ 'aggr': 'sum',
+ 'aug_p_flip': 0.5,
+ 'aug_trans': 0.1,
+ 'aug_zoom': 1.5,
+ 'base_width': 0.5,
+ 'batch_size': 2,
+ 'checkpoint': 'data/dagr_s_50.pth',
+ 'clip': 0.1,
+ 'config': 'config/dagr-s-dsec.yaml',
+ 'dataset': 'dsec',
+ 'dataset_directory': '/data/dsec',
+ 'edge_attr_dim': 2,
+ 'img_net': 'resnet50',
+ 'keep_temporal_ordering': False,
+ 'kernel_size': 5,
+ 'l_r': 0.0002,
+ 'max_neighbors': 16,
+ 'n_nodes': 50000,
+ 'net_stem_width': 0.5,
+ 'no_eval': False,
+ 'no_events': False,
+ 'num_interframe_steps': 10,
+ 'num_scales': 2,
+ 'output_directory': 'log',
+ 'pooling_aggr': 'max',
+ 'pooling_dim_at_output': '5x7',
+ 'radius': 0.01,
+ 'run_test': False,
+ 'task': 'detection',
+ 'time_window_us': 1000000,
+ 'tot_num_epochs': 801,
+ 'use_image': True,
+ 'weight_decay': 1e-05,
+ 'yolo_stem_width': 0.5}
+init datasets
+init net
+/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torch/functional.py:534: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3595.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Testing wandering-valley-47:   0%|▏                                                                                                                                                       | 6/4990 [00:01<14:09,  5.87it/s]
+dataset <dsec_det.directory.DSECDirectory object at 0x7fcf51b87e80>
+len detections_0 lens:  2
+len detections_1 lens:  2
+dataset <dsec_det.directory.DSECDirectory object at 0x7fcf51b87e80>
+len detections_0 lens:  2
+len detections_1 lens:  2
+dataset <dsec_det.directory.DSECDirectory object at 0x7fcf51b87e80>
+len detections_0 lens:  2
+len detections_1 lens:  2
+dataset <dsec_det.directory.DSECDirectory object at 0x7fcf51b87e80>
+len detections_0 lens:  2
+len detections_1 lens:  2
+dataset <dsec_det.directory.DSECDirectory object at 0x7fcf51b87e80>
+len detections_0 lens:  2
+len detections_1 lens:  2
+dataset <dsec_det.directory.DSECDirectory object at 0x7fcf51b87e80>
+len detections_0 lens:  2
+len detections_1 lens:  2
+dataset <dsec_det.directory.DSECDirectory object at 0x7fcf51b87e80>
+len detections_0 lens:  2
+len detections_1 lens:  2
+dataset <dsec_det.directory.DSECDirectory object at 0x7fcf51b87e80>
+len detections_0 lens:  2
+len detections_1 lens:  2
+dataset <dsec_det.directory.DSECDirectory object at 0x7fcf51b87e80>
+len detections_0 lens:  2
+len detections_1 lens:  2
+dataset <dsec_det.directory.DSECDirectory object at 0x7fcf51b87e80>
+len detections_0 lens:  2
+len detections_1 lens:  2
+dataset <dsec_det.directory.DSECDirectory object at 0x7fcf51b87e80>
+len detections_0 lens:  2
+len detections_1 lens:  2
+dataset <dsec_det.directory.DSECDirectory object at 0x7fcf51b87e80>
+len detections_0 lens:  2
+len detections_1 lens:  2
+dataset <dsec_det.directory.DSECDirectory object at 0x7fcf51b87e80>
+len detections_0 lens:  2
+len detections_1 lens:  2
+dataset <dsec_det.directory.DSECDirectory object at 0x7fcf51b87e80>
+len detections_0 lens:  2
+len detections_1 lens:  2
+dataset <dsec_det.directory.DSECDirectory object at 0x7fcf51b87e80>
+len detections_0 lens:  2
+len detections_1 lens:  2
+dataset <dsec_det.directory.DSECDirectory object at 0x7fcf51b87e80>
+len detections_0 lens:  2
+len detections_1 lens:  2
+dataset <dsec_det.directory.DSECDirectory object at 0x7fcf51b87e80>
+len detections_0 lens:  2
+len detections_1 lens:  2
+dataset <dsec_det.directory.DSECDirectory object at 0x7fcf51b87e80>
+len detections_0 lens:  2
+len detections_1 lens:  2
+dataset <dsec_det.directory.DSECDirectory object at 0x7fcf51b87e80>
+len detections_0 lens:  2
+len detections_1 lens:  2
+dataset <dsec_det.directory.DSECDirectory object at 0x7fcf51b87e80>
+len detections_0 lens:  2
+len detections_1 lens:  2
+dataset <dsec_det.directory.DSECDirectory object at 0x7fcf51b87e80>
+len detections_0 lens:  2
+len detections_1 lens:  2
+dataset <dsec_det.directory.DSECDirectory object at 0x7fcf51b87e80>
+len detections_0 lens:  2
+len detections_1 lens:  2
+dataset <dsec_det.directory.DSECDirectory object at 0x7fcf51b87e80>
+len detections_0 lens:  2
+len detections_1 lens:  2
+dataset <dsec_det.directory.DSECDirectory object at 0x7fcf51b87e80>
+len detections_0 lens:  2
+Testing wandering-valley-47:   0%|▍                                                                                                                                                      | 15/4990 [00:02<12:33,  6.60it/s]
+Traceback (most recent call last):
+  File "scripts/run_test_interframe.py", line 85, in <module>
+    metrics, detections_one_offset = run_test_with_visualization(test_loader, ema.ema, dataset=args.dataset, name=wandb.run.name, compile_detections=True,
+  File "/home/mlc/dagr/src/dagr/utils/testing.py", line 29, in run_test_with_visualization
+    for i, data in enumerate(tqdm.tqdm(loader, desc=f"Testing {name}")):
+  File "/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 701, in __next__
+    data = self._next_data()
+  File "/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 757, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/mlc/dagr/src/dagr/data/dsec_data.py", line 173, in __getitem__
+    detections_1 = interpolate_tracks(detections_0, detections_1, image_ts_1)
+  File "/home/mlc/dagr/src/dagr/data/dsec_data.py", line 30, in interpolate_tracks
+    assert len(detections_1) == len(detections_0)
+AssertionError
+dataset <dsec_det.directory.DSECDirectory object at 0x7fcf51b87e80>
+len detections_0 lens:  2
+len detections_1 lens:  2
+dataset <dsec_det.directory.DSECDirectory object at 0x7fcf51b87e80>
+len detections_0 lens:  2
+len detections_1 lens:  2
+dataset <dsec_det.directory.DSECDirectory object at 0x7fcf51b87e80>
+len detections_0 lens:  2
+len detections_1 lens:  2
+dataset <dsec_det.directory.DSECDirectory object at 0x7fcf51b87e80>
+len detections_0 lens:  2
+len detections_1 lens:  2
+dataset <dsec_det.directory.DSECDirectory object at 0x7fcf51b87e80>
+len detections_0 lens:  2
+len detections_1 lens:  2
+dataset <dsec_det.directory.DSECDirectory object at 0x7fcf51b87e80>
+len detections_0 lens:  2
+len detections_1 lens:  2
+dataset <dsec_det.directory.DSECDirectory object at 0x7fcf51b87e80>
+len detections_0 lens:  2
+len detections_1 lens:  1
+image_index_0:  30
+image_index_1:  31
+track_masks:  [False  True  True ...  True  True  True]
+dataset.root.name:  zurich_city_15_a
+Detections 0:  [(39550950424, 204., 187., 82., 46., 4, 0.9901972, 1)
+ (39550950424, -16., 165., 42., 86., 4, 0.9888249, 7)]
+Detections 1:  [(39551000368, 203., 185., 83., 46., 4, 0.9944971, 1)]

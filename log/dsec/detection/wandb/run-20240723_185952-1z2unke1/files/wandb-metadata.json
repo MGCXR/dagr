@@ -1,0 +1,396 @@
+{
+    "os": "Linux-5.15.0-113-generic-x86_64-with-glibc2.10",
+    "python": "3.8.18",
+    "heartbeatAt": "2024-07-23T10:59:53.825492",
+    "startedAt": "2024-07-23T10:59:52.863656",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--config",
+        "config/dagr-s-dsec.yaml",
+        "--use_image",
+        "--img_net",
+        "resnet50",
+        "--checkpoint",
+        "data/dagr_s_50.pth",
+        "--batch_size",
+        "2",
+        "--dataset_directory",
+        "/data/dsec/",
+        "--output_directory",
+        "./log",
+        "--num_interframe_steps",
+        "10"
+    ],
+    "state": "running",
+    "program": "scripts/run_test_interframe.py",
+    "codePathLocal": "scripts/run_test_interframe.py",
+    "codePath": "scripts/run_test_interframe.py",
+    "git": {
+        "remote": "https://github.com/MGCXR/dagr.git",
+        "commit": "68af3a34aa75a40581ca989baa3e5aa101e3a481"
+    },
+    "email": "mlc@123",
+    "root": "/home/mlc/dagr",
+    "host": "cxhpc",
+    "username": "mlc",
+    "executable": "/home/mlc/.conda/envs/dagr/bin/python",
+    "cpu_count": 32,
+    "cpu_count_logical": 64,
+    "cpu_freq": {
+        "current": 2891.2614531250006,
+        "min": 800.0,
+        "max": 3500.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3199.996,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 2600.0,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3200.003,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 800.0,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3500.0,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3199.996,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3200.003,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3076.209,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3076.197,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3076.197,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3076.187,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3076.187,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3076.175,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3076.178,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3076.166,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3076.166,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3076.154,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3076.15,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3076.14,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3500.0,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3076.134,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3076.13,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3076.127,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3199.996,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3200.003,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 1860.58,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 800.0,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3200.003,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 1467.915,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3500.0,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3199.996,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3500.0,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3200.0,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3081.861,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3082.43,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3500.0,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 800.0,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3083.331,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3083.869,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3084.088,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 800.0,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 800.0,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 800.0,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3085.5,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3086.034,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3151.244,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3086.763,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 800.0,
+            "min": 800.0,
+            "max": 3500.0
+        },
+        {
+            "current": 3087.481,
+            "min": 800.0,
+            "max": 3500.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 816.5090751647949,
+            "used": 200.04676055908203
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "gpu_count": 4,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 4090",
+            "memory_total": 25757220864
+        },
+        {
+            "name": "NVIDIA GeForce RTX 4090",
+            "memory_total": 25757220864
+        },
+        {
+            "name": "NVIDIA GeForce RTX 4090",
+            "memory_total": 25757220864
+        },
+        {
+            "name": "NVIDIA GeForce RTX 4090",
+            "memory_total": 25757220864
+        }
+    ],
+    "memory": {
+        "total": 251.4918670654297
+    }
+}

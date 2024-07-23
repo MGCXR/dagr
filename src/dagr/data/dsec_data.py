@@ -24,6 +24,9 @@ def tracks_to_array(tracks):
 
 
 def interpolate_tracks(detections_0, detections_1, t):
+    # print("detections_0 lens: ", len(detections_0))
+    # print("detections_1 lens: ", len(detections_1))
+    
     assert len(detections_1) == len(detections_0)
     if len(detections_0) == 0:
         return detections_1
@@ -139,14 +142,28 @@ class DSEC(Dataset):
 
         # print(f"Fetching item with index: {idx}")
         dataset, image_index_pairs, track_masks, idx = self.rel_index(idx)
+        # print("idx: ", idx)
         image_index_0, image_index_1 = image_index_pairs[idx]
         image_ts_0, image_ts_1 = dataset.images.timestamps[[image_index_0, image_index_1]]
         # print(f"image_index_1: {image_index_1}, track_masks: {track_masks}, dataset.root.name: {self.dataset.root.name}")
         detections_0 = self.dataset.get_tracks(image_index_0, mask=track_masks, directory_name=dataset.root.name)
         detections_1 = self.dataset.get_tracks(image_index_1, mask=track_masks, directory_name=dataset.root.name)
+        # print("detections_0 shape: ", np.shape(detections_0))
+        # print("detections_1 shape: ", np.shape(detections_1))
+        # print("len detections_0 lens: ", len(detections_0))
+        # print("len detections_1 lens: ", len(detections_1))
+        # if len(detections_1) == 1:
+        #     print("image_index_0: ", image_index_0)
+        #     print("image_index_1: ", image_index_1)
+        #     print("track_masks: ", track_masks)
+        #     print("dataset.root.name: ", dataset.root.name)
+        #     print("Detections 0: ", detections_0)
+        #     print("Detections 1: ", detections_1)
 
         detections_0 = self.preprocess_detections(detections_0)
         detections_1 = self.preprocess_detections(detections_1)
+        # print("Detections 0: ", detections_0)
+        # print("Detections 1: ", detections_1)
 
         image_0 = self.dataset.get_image(image_index_0, directory_name=dataset.root.name)
         image_0 = self.preprocess_image(image_0)
