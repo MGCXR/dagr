@@ -406,3 +406,11 @@
 2024-07-23 20:28:37,528 DEBUG   HandlerThread:989886 [handler.py:handle_request():158] handle_request: internal_messages
 2024-07-23 20:28:38,475 INFO    Thread-12 :989886 [dir_watcher.py:_on_file_modified():288] file/dir modified: log/dsec/detection/wandb/run-20240723_202521-4bovpmc7/files/output.log
 2024-07-23 20:28:38,528 DEBUG   HandlerThread:989886 [handler.py:handle_request():158] handle_request: internal_messages
+2024-07-23 20:28:39,529 DEBUG   HandlerThread:989886 [handler.py:handle_request():158] handle_request: internal_messages
+2024-07-23 20:28:40,477 INFO    Thread-12 :989886 [dir_watcher.py:_on_file_modified():288] file/dir modified: log/dsec/detection/wandb/run-20240723_202521-4bovpmc7/files/output.log
+2024-07-23 20:28:40,529 DEBUG   HandlerThread:989886 [handler.py:handle_request():158] handle_request: internal_messages
+2024-07-23 20:28:41,550 DEBUG   HandlerThread:989886 [handler.py:handle_request():158] handle_request: internal_messages
+2024-07-23 20:28:42,092 DEBUG   HandlerThread:989886 [handler.py:handle_request():158] handle_request: status_report
+2024-07-23 20:28:42,478 INFO    Thread-12 :989886 [dir_watcher.py:_on_file_modified():288] file/dir modified: log/dsec/detection/wandb/run-20240723_202521-4bovpmc7/files/output.log
+2024-07-23 20:28:42,529 DEBUG   HandlerThread:989886 [handler.py:handle_request():158] handle_request: internal_messages
+2024-07-23 20:28:43,529 DEBUG   HandlerThread:989886 [handler.py:handle_request():158] handle_request: internal_messages
