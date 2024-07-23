@@ -105,11 +105,17 @@ def __graph_processing(module, data, *args, **kwargs):
     num_edges = 0
     num_times_apply_bias_and_root = 0
     new_nodes = len(data.x) > len(module.asy_graph.x)
-    # print("data keys", data.keys)
-
+    
+    
+    
     # first update the input graph
-    if new_nodes:
+    if len(data.x)==0 or new_nodes:
+        # print("len(data.x)", len(data.x))
+        # print("len module asy graph x", len(module.asy_graph.x))
+        # print("data keys", data.keys)
         idx_new = graph_new_nodes(module.asy_graph, data)
+        # print("idx_new", idx_new)
+        # print("graph new nodes is ok", idx_new)
 
         module.asy_graph.x = torch.cat([module.asy_graph.x, data.x[idx_new]])
         idx_new_comp = idx_new
@@ -129,7 +135,7 @@ def __graph_processing(module, data, *args, **kwargs):
             num_edges += edge_index_new.shape[1]
     else:
         idx_diff, pos_idx_diff = graph_changed_nodes(module.asy_graph, data)
-        print("graph changed nodes is ok", idx_diff, pos_idx_diff)
+        # print("graph changed nodes is ok", idx_diff, pos_idx_diff)
         idx_new_comp = _efficient_cat_unique([pos_idx_diff, idx_diff, data.edge_index[1].unique()])
         data.diff_idx = idx_new_comp
 

@@ -1,0 +1,62 @@
+{'activation': 'relu',
+ 'after_pool_width': 1,
+ 'aggr': 'sum',
+ 'aug_p_flip': 0.5,
+ 'aug_trans': 0.1,
+ 'aug_zoom': 1.5,
+ 'base_width': 0.5,
+ 'batch_size': 3,
+ 'checkpoint': 'data/dagr_s_50.pth',
+ 'clip': 0.1,
+ 'config': 'config/dagr-s-dsec.yaml',
+ 'dataset': 'dsec',
+ 'dataset_directory': '/data/dsec',
+ 'edge_attr_dim': 2,
+ 'img_net': 'resnet50',
+ 'keep_temporal_ordering': False,
+ 'kernel_size': 5,
+ 'l_r': 0.0002,
+ 'max_neighbors': 16,
+ 'n_nodes': 50000,
+ 'net_stem_width': 0.5,
+ 'no_eval': False,
+ 'no_events': False,
+ 'num_interframe_steps': 10,
+ 'num_scales': 2,
+ 'output_directory': 'log',
+ 'pooling_aggr': 'max',
+ 'pooling_dim_at_output': '5x7',
+ 'radius': 0.01,
+ 'run_test': False,
+ 'task': 'detection',
+ 'time_window_us': 1000000,
+ 'tot_num_epochs': 801,
+ 'use_image': True,
+ 'weight_decay': 1e-05,
+ 'yolo_stem_width': 0.5}
+init datasets
+init net
+/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+Traceback (most recent call last):
+  File "scripts/run_test_interframe.py", line 77, in <module>
+    checkpoint = torch.load(args.checkpoint,weights_only=False)
+  File "/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torch/serialization.py", line 1253, in load
+    return _load(
+  File "/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torch/serialization.py", line 1740, in _load
+    result = unpickler.load()
+  File "/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torch/serialization.py", line 1705, in persistent_load
+    typed_storage = load_tensor(
+  File "/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torch/serialization.py", line 1677, in load_tensor
+    wrap_storage=restore_location(storage, location),
+  File "/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torch/serialization.py", line 531, in default_restore_location
+    result = fn(storage, location)
+  File "/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torch/serialization.py", line 470, in _deserialize
+    return obj.to(device=device)
+  File "/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torch/storage.py", line 274, in to
+    return _to(self, device, non_blocking)
+  File "/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torch/_utils.py", line 89, in _to
+    untyped_storage = torch.UntypedStorage(self.size(), device=device)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 23.64 GiB of which 13.12 MiB is free. Process 1007117 has 22.75 GiB memory in use. Including non-PyTorch memory, this process has 878.00 MiB memory in use. Of the allocated memory 479.62 MiB is allocated by PyTorch, and 14.38 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

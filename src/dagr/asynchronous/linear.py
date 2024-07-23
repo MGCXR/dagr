@@ -30,7 +30,8 @@ def __graph_initialization(module: Linear, data) -> torch.Tensor:
     return module.graph_out.clone()
 
 def __graph_processing(module: Linear, data) -> torch.Tensor:
-    if len(module.asy_graph.x) < len(data.x):
+    
+    if len(data.x)==0 or len(module.asy_graph.x) < len(data.x):
         diff_idx = graph_new_nodes(module.asy_graph, data)
         diff_pos_idx = diff_idx.clone()
         module.graph_out.x = torch.cat([module.graph_out.x, torch.zeros_like(module.graph_out.x[:len(diff_idx)])])

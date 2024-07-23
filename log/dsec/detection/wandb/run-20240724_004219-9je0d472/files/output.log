@@ -1,0 +1,1797 @@
+{'activation': 'relu',
+ 'after_pool_width': 1,
+ 'aggr': 'sum',
+ 'aug_p_flip': 0.5,
+ 'aug_trans': 0.1,
+ 'aug_zoom': 1.5,
+ 'base_width': 0.5,
+ 'batch_size': 2,
+ 'checkpoint': 'data/dagr_s_50.pth',
+ 'clip': 0.1,
+ 'config': 'config/dagr-s-dsec.yaml',
+ 'dataset': 'dsec',
+ 'dataset_directory': '/data/dsec',
+ 'edge_attr_dim': 2,
+ 'img_net': 'resnet50',
+ 'keep_temporal_ordering': False,
+ 'kernel_size': 5,
+ 'l_r': 0.0002,
+ 'max_neighbors': 16,
+ 'n_nodes': 50000,
+ 'net_stem_width': 0.5,
+ 'no_eval': False,
+ 'no_events': False,
+ 'num_interframe_steps': 1,
+ 'num_scales': 2,
+ 'output_directory': 'log',
+ 'pooling_aggr': 'max',
+ 'pooling_dim_at_output': '5x7',
+ 'radius': 0.01,
+ 'run_test': False,
+ 'task': 'detection',
+ 'time_window_us': 1000000,
+ 'tot_num_epochs': 801,
+ 'use_image': True,
+ 'weight_decay': 1e-05,
+ 'yolo_stem_width': 0.5}
+init datasets
+init net
+/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torch/functional.py:534: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3595.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+Index: 0, Number of indices: 1239
+Assertion passed for index: 0
+Index: 1, Number of indices: 1239
+Assertion passed for index: 1
+Index: 0, Number of indices: 1239
+Assertion passed for index: 0
+Index: 1, Number of indices: 1239
+Assertion passed for index: 1
+Index: 2, Number of indices: 1239
+Assertion passed for index: 2
+Index: 1, Number of indices: 1239
+Assertion passed for index: 1
+Testing sparkling-frog-73:   0%|▎                                                                                                                                                               | 10/4990 [00:01<10:04,  8.24it/s]
+Index: 2, Number of indices: 1239
+Assertion passed for index: 2
+Index: 3, Number of indices: 1239
+Assertion passed for index: 3
+Index: 2, Number of indices: 1239
+Assertion passed for index: 2
+Index: 3, Number of indices: 1239
+Assertion passed for index: 3
+Index: 4, Number of indices: 1239
+Assertion passed for index: 4
+Index: 3, Number of indices: 1239
+Assertion passed for index: 3
+Index: 4, Number of indices: 1239
+Assertion passed for index: 4
+Index: 5, Number of indices: 1239
+Assertion passed for index: 5
+Index: 4, Number of indices: 1239
+Assertion passed for index: 4
+Index: 5, Number of indices: 1239
+Assertion passed for index: 5
+Index: 6, Number of indices: 1239
+Assertion passed for index: 6
+Index: 5, Number of indices: 1239
+Assertion passed for index: 5
+Index: 6, Number of indices: 1239
+Assertion passed for index: 6
+Index: 7, Number of indices: 1239
+Assertion passed for index: 7
+Index: 6, Number of indices: 1239
+Assertion passed for index: 6
+Index: 7, Number of indices: 1239
+Assertion passed for index: 7
+Index: 8, Number of indices: 1239
+Assertion passed for index: 8
+Index: 7, Number of indices: 1239
+Assertion passed for index: 7
+Index: 8, Number of indices: 1239
+Assertion passed for index: 8
+Index: 9, Number of indices: 1239
+Assertion passed for index: 9
+Index: 8, Number of indices: 1239
+Assertion passed for index: 8
+Index: 9, Number of indices: 1239
+Assertion passed for index: 9
+Index: 10, Number of indices: 1239
+Assertion passed for index: 10
+Index: 9, Number of indices: 1239
+Assertion passed for index: 9
+Index: 10, Number of indices: 1239
+Assertion passed for index: 10
+Index: 11, Number of indices: 1239
+Assertion passed for index: 11
+Index: 10, Number of indices: 1239
+Assertion passed for index: 10
+Index: 11, Number of indices: 1239
+Assertion passed for index: 11
+Index: 12, Number of indices: 1239
+Assertion passed for index: 12
+Index: 11, Number of indices: 1239
+Assertion passed for index: 11
+Index: 12, Number of indices: 1239
+Assertion passed for index: 12
+Index: 13, Number of indices: 1239
+Assertion passed for index: 13
+Index: 12, Number of indices: 1239
+Assertion passed for index: 12
+Index: 13, Number of indices: 1239
+Assertion passed for index: 13
+Index: 14, Number of indices: 1239
+Assertion passed for index: 14
+Index: 13, Number of indices: 1239
+Assertion passed for index: 13
+Index: 14, Number of indices: 1239
+Assertion passed for index: 14
+Index: 15, Number of indices: 1239
+Assertion passed for index: 15
+Index: 14, Number of indices: 1239
+Assertion passed for index: 14
+Index: 15, Number of indices: 1239
+Assertion passed for index: 15
+Index: 16, Number of indices: 1239
+Assertion passed for index: 16
+Index: 15, Number of indices: 1239
+Assertion passed for index: 15
+Index: 16, Number of indices: 1239
+Assertion passed for index: 16
+Index: 17, Number of indices: 1239
+Assertion passed for index: 17
+Index: 16, Number of indices: 1239
+Assertion passed for index: 16
+Index: 17, Number of indices: 1239
+Assertion passed for index: 17
+Index: 18, Number of indices: 1239
+Assertion passed for index: 18
+Index: 17, Number of indices: 1239
+Assertion passed for index: 17
+Index: 18, Number of indices: 1239
+Assertion passed for index: 18
+Index: 19, Number of indices: 1239
+Assertion passed for index: 19
+Index: 18, Number of indices: 1239
+Assertion passed for index: 18
+Index: 19, Number of indices: 1239
+Assertion passed for index: 19
+Index: 20, Number of indices: 1239
+Assertion passed for index: 20
+Index: 19, Number of indices: 1239
+Assertion passed for index: 19
+Index: 20, Number of indices: 1239
+Assertion passed for index: 20
+Index: 21, Number of indices: 1239
+Assertion passed for index: 21
+Index: 20, Number of indices: 1239
+Assertion passed for index: 20
+Index: 21, Number of indices: 1239
+Assertion passed for index: 21
+Index: 22, Number of indices: 1239
+Assertion passed for index: 22
+Index: 21, Number of indices: 1239
+Assertion passed for index: 21
+Index: 22, Number of indices: 1239
+Assertion passed for index: 22
+Index: 23, Number of indices: 1239
+Assertion passed for index: 23
+Index: 22, Number of indices: 1239
+Assertion passed for index: 22
+Index: 23, Number of indices: 1239
+Assertion passed for index: 23
+Index: 24, Number of indices: 1239
+Assertion passed for index: 24
+Index: 23, Number of indices: 1239
+Assertion passed for index: 23
+Index: 24, Number of indices: 1239
+Assertion passed for index: 24
+Index: 25, Number of indices: 1239
+Assertion passed for index: 25
+Index: 24, Number of indices: 1239
+Assertion passed for index: 24
+Index: 25, Number of indices: 1239
+Assertion passed for index: 25
+Index: 26, Number of indices: 1239
+Assertion passed for index: 26
+Index: 25, Number of indices: 1239
+Assertion passed for index: 25
+Index: 26, Number of indices: 1239
+Assertion passed for index: 26
+Index: 27, Number of indices: 1239
+Assertion passed for index: 27
+Index: 26, Number of indices: 1239
+Assertion passed for index: 26
+Index: 27, Number of indices: 1239
+Assertion passed for index: 27
+Index: 28, Number of indices: 1239
+Assertion passed for index: 28
+Index: 27, Number of indices: 1239
+Assertion passed for index: 27
+Index: 28, Number of indices: 1239
+Assertion passed for index: 28
+Index: 29, Number of indices: 1239
+Assertion passed for index: 29
+Index: 28, Number of indices: 1239
+Assertion passed for index: 28
+Index: 29, Number of indices: 1239
+Assertion passed for index: 29
+Index: 30, Number of indices: 1239
+Assertion passed for index: 30
+Index: 29, Number of indices: 1239
+Assertion passed for index: 29
+Index: 30, Number of indices: 1239
+Assertion passed for index: 30
+Index: 31, Number of indices: 1239
+Assertion passed for index: 31
+Index: 30, Number of indices: 1239
+Assertion passed for index: 30
+Index: 32, Number of indices: 1239
+Assertion passed for index: 32
+Index: 33, Number of indices: 1239
+Assertion passed for index: 33
+Index: 32, Number of indices: 1239
+Assertion passed for index: 32
+Index: 33, Number of indices: 1239
+Assertion passed for index: 33
+Index: 34, Number of indices: 1239
+Assertion passed for index: 34
+Index: 33, Number of indices: 1239
+Assertion passed for index: 33
+Index: 34, Number of indices: 1239
+Assertion passed for index: 34
+Index: 35, Number of indices: 1239
+Assertion passed for index: 35
+Index: 34, Number of indices: 1239
+Assertion passed for index: 34
+Index: 35, Number of indices: 1239
+Assertion passed for index: 35
+Index: 36, Number of indices: 1239
+Assertion passed for index: 36
+Index: 35, Number of indices: 1239
+Assertion passed for index: 35
+Index: 36, Number of indices: 1239
+Assertion passed for index: 36
+Index: 37, Number of indices: 1239
+Assertion passed for index: 37
+Index: 36, Number of indices: 1239
+
+Testing sparkling-frog-73:   0%|▊                                                                                                                                                               | 24/4990 [00:03<15:59,  5.18it/s]
+Index: 37, Number of indices: 1239
+Assertion passed for index: 37
+Index: 38, Number of indices: 1239
+Assertion passed for index: 38
+Index: 37, Number of indices: 1239
+Assertion passed for index: 37
+Index: 38, Number of indices: 1239
+Assertion passed for index: 38
+Index: 39, Number of indices: 1239
+Assertion passed for index: 39
+Index: 38, Number of indices: 1239
+Assertion passed for index: 38
+Index: 39, Number of indices: 1239
+Assertion passed for index: 39
+Index: 40, Number of indices: 1239
+Assertion passed for index: 40
+Index: 39, Number of indices: 1239
+Assertion passed for index: 39
+Index: 40, Number of indices: 1239
+Assertion passed for index: 40
+Index: 41, Number of indices: 1239
+Assertion passed for index: 41
+Index: 40, Number of indices: 1239
+Assertion passed for index: 40
+Index: 42, Number of indices: 1239
+Assertion passed for index: 42
+Index: 43, Number of indices: 1239
+Assertion passed for index: 43
+Index: 42, Number of indices: 1239
+Assertion passed for index: 42
+Index: 43, Number of indices: 1239
+Assertion passed for index: 43
+Index: 44, Number of indices: 1239
+Assertion passed for index: 44
+Index: 43, Number of indices: 1239
+Assertion passed for index: 43
+Index: 44, Number of indices: 1239
+Assertion passed for index: 44
+Index: 45, Number of indices: 1239
+Assertion passed for index: 45
+Index: 44, Number of indices: 1239
+Assertion passed for index: 44
+Index: 45, Number of indices: 1239
+Assertion passed for index: 45
+Index: 46, Number of indices: 1239
+Assertion passed for index: 46
+Index: 45, Number of indices: 1239
+Assertion passed for index: 45
+Index: 46, Number of indices: 1239
+Assertion passed for index: 46
+Index: 47, Number of indices: 1239
+Assertion passed for index: 47
+Index: 46, Number of indices: 1239
+Assertion passed for index: 46
+Index: 47, Number of indices: 1239
+Assertion passed for index: 47
+Index: 48, Number of indices: 1239
+Assertion passed for index: 48
+Index: 47, Number of indices: 1239
+Assertion passed for index: 47
+Index: 48, Number of indices: 1239
+Assertion passed for index: 48
+Index: 49, Number of indices: 1239
+Assertion passed for index: 49
+Index: 48, Number of indices: 1239
+Assertion passed for index: 48
+Index: 49, Number of indices: 1239
+Assertion passed for index: 49
+Index: 50, Number of indices: 1239
+Assertion passed for index: 50
+Index: 49, Number of indices: 1239
+Assertion passed for index: 49
+Index: 50, Number of indices: 1239
+Assertion passed for index: 50
+Index: 51, Number of indices: 1239
+Assertion passed for index: 51
+Index: 50, Number of indices: 1239
+Assertion passed for index: 50
+Index: 51, Number of indices: 1239
+Assertion passed for index: 51
+Index: 52, Number of indices: 1239
+Assertion passed for index: 52
+Index: 51, Number of indices: 1239
+Assertion passed for index: 51
+Index: 52, Number of indices: 1239
+Assertion passed for index: 52
+Index: 53, Number of indices: 1239
+Assertion passed for index: 53
+Index: 52, Number of indices: 1239
+Assertion passed for index: 52
+Index: 53, Number of indices: 1239
+Assertion passed for index: 53
+Index: 54, Number of indices: 1239
+Assertion passed for index: 54
+Index: 53, Number of indices: 1239
+Assertion passed for index: 53
+Index: 54, Number of indices: 1239
+Assertion passed for index: 54
+Index: 55, Number of indices: 1239
+Assertion passed for index: 55
+Index: 54, Number of indices: 1239
+Assertion passed for index: 54
+Index: 55, Number of indices: 1239
+Assertion passed for index: 55
+Index: 56, Number of indices: 1239
+Assertion passed for index: 56
+Index: 55, Number of indices: 1239
+Assertion passed for index: 55
+Index: 56, Number of indices: 1239
+Assertion passed for index: 56
+Index: 57, Number of indices: 1239
+Assertion passed for index: 57
+Index: 56, Number of indices: 1239
+Assertion passed for index: 56
+Index: 57, Number of indices: 1239
+Assertion passed for index: 57
+Index: 58, Number of indices: 1239
+Assertion passed for index: 58
+Index: 57, Number of indices: 1239
+Assertion passed for index: 57
+Index: 58, Number of indices: 1239
+Assertion passed for index: 58
+Index: 59, Number of indices: 1239
+Assertion passed for index: 59
+Index: 58, Number of indices: 1239
+Assertion passed for index: 58
+Index: 59, Number of indices: 1239
+Assertion passed for index: 59
+Index: 60, Number of indices: 1239
+Assertion passed for index: 60
+Index: 59, Number of indices: 1239
+Assertion passed for index: 59
+Index: 60, Number of indices: 1239
+Assertion passed for index: 60
+Index: 61, Number of indices: 1239
+Assertion passed for index: 61
+Index: 60, Number of indices: 1239
+
+Testing sparkling-frog-73:   1%|█▏                                                                                                                                                              | 36/4990 [00:05<10:39,  7.75it/s]
+Index: 61, Number of indices: 1239
+Assertion passed for index: 61
+Index: 62, Number of indices: 1239
+Assertion passed for index: 62
+Index: 61, Number of indices: 1239
+Assertion passed for index: 61
+Index: 62, Number of indices: 1239
+Assertion passed for index: 62
+Index: 63, Number of indices: 1239
+Assertion passed for index: 63
+Index: 62, Number of indices: 1239
+Assertion passed for index: 62
+Index: 63, Number of indices: 1239
+Assertion passed for index: 63
+Index: 64, Number of indices: 1239
+Assertion passed for index: 64
+Index: 63, Number of indices: 1239
+Assertion passed for index: 63
+Index: 64, Number of indices: 1239
+Assertion passed for index: 64
+Index: 65, Number of indices: 1239
+Assertion passed for index: 65
+Index: 64, Number of indices: 1239
+Assertion passed for index: 64
+Index: 65, Number of indices: 1239
+Assertion passed for index: 65
+Index: 66, Number of indices: 1239
+Assertion passed for index: 66
+Index: 65, Number of indices: 1239
+Assertion passed for index: 65
+Index: 66, Number of indices: 1239
+Assertion passed for index: 66
+Index: 67, Number of indices: 1239
+Assertion passed for index: 67
+Index: 66, Number of indices: 1239
+Assertion passed for index: 66
+Index: 67, Number of indices: 1239
+Assertion passed for index: 67
+Index: 68, Number of indices: 1239
+Assertion passed for index: 68
+Index: 67, Number of indices: 1239
+Assertion passed for index: 67
+Index: 68, Number of indices: 1239
+Assertion passed for index: 68
+Index: 69, Number of indices: 1239
+Assertion passed for index: 69
+Index: 68, Number of indices: 1239
+Assertion passed for index: 68
+Index: 70, Number of indices: 1239
+Assertion passed for index: 70
+Index: 71, Number of indices: 1239
+Assertion passed for index: 71
+Index: 70, Number of indices: 1239
+Assertion passed for index: 70
+Index: 71, Number of indices: 1239
+Assertion passed for index: 71
+Index: 72, Number of indices: 1239
+Assertion passed for index: 72
+Index: 71, Number of indices: 1239
+Assertion passed for index: 71
+Index: 72, Number of indices: 1239
+Assertion passed for index: 72
+Index: 73, Number of indices: 1239
+Assertion passed for index: 73
+Index: 72, Number of indices: 1239
+Assertion passed for index: 72
+Index: 73, Number of indices: 1239
+Assertion passed for index: 73
+Index: 74, Number of indices: 1239
+Assertion passed for index: 74
+Index: 73, Number of indices: 1239
+Assertion passed for index: 73
+Index: 74, Number of indices: 1239
+Assertion passed for index: 74
+Index: 75, Number of indices: 1239
+Assertion passed for index: 75
+Index: 74, Number of indices: 1239
+Assertion passed for index: 74
+Index: 79, Number of indices: 1239
+Assertion passed for index: 79
+Index: 80, Number of indices: 1239
+Assertion passed for index: 80
+Index: 79, Number of indices: 1239
+Assertion passed for index: 79
+Index: 81, Number of indices: 1239
+Assertion passed for index: 81
+Index: 82, Number of indices: 1239
+Assertion passed for index: 82
+Index: 81, Number of indices: 1239
+Assertion passed for index: 81
+Index: 82, Number of indices: 1239
+Assertion passed for index: 82
+Index: 83, Number of indices: 1239
+Assertion passed for index: 83
+Index: 82, Number of indices: 1239
+Assertion passed for index: 82
+Index: 83, Number of indices: 1239
+Assertion passed for index: 83
+Index: 84, Number of indices: 1239
+Assertion passed for index: 84
+Index: 83, Number of indices: 1239
+Assertion passed for index: 83
+Index: 84, Number of indices: 1239
+Assertion passed for index: 84
+Index: 85, Number of indices: 1239
+Assertion passed for index: 85
+Index: 84, Number of indices: 1239
+Assertion passed for index: 84
+Index: 85, Number of indices: 1239
+Assertion passed for index: 85
+Index: 86, Number of indices: 1239
+Assertion passed for index: 86
+Index: 85, Number of indices: 1239
+Assertion passed for index: 85
+Index: 86, Number of indices: 1239
+Assertion passed for index: 86
+Index: 87, Number of indices: 1239
+Assertion passed for index: 87
+Index: 86, Number of indices: 1239
+Assertion passed for index: 86
+Index: 87, Number of indices: 1239
+Assertion passed for index: 87
+Index: 88, Number of indices: 1239
+Assertion passed for index: 88
+Index: 87, Number of indices: 1239
+Assertion passed for index: 87
+Index: 88, Number of indices: 1239
+Assertion passed for index: 88
+Index: 89, Number of indices: 1239
+Assertion passed for index: 89
+Index: 88, Number of indices: 1239
+Assertion passed for index: 88
+Index: 89, Number of indices: 1239
+Assertion passed for index: 89
+Index: 90, Number of indices: 1239
+Assertion passed for index: 90
+Index: 89, Number of indices: 1239
+Assertion passed for index: 89
+Index: 90, Number of indices: 1239
+Assertion passed for index: 90
+Index: 91, Number of indices: 1239
+Assertion passed for index: 91
+Index: 90, Number of indices: 1239
+Assertion passed for index: 90
+Index: 91, Number of indices: 1239
+Assertion passed for index: 91
+Index: 92, Number of indices: 1239
+Assertion passed for index: 92
+Index: 91, Number of indices: 1239
+Assertion passed for index: 91
+Index: 92, Number of indices: 1239
+Assertion passed for index: 92
+Index: 93, Number of indices: 1239
+Assertion passed for index: 93
+Index: 92, Number of indices: 1239
+Assertion passed for index: 92
+Index: 93, Number of indices: 1239
+Assertion passed for index: 93
+Index: 94, Number of indices: 1239
+Assertion passed for index: 94
+Index: 93, Number of indices: 1239
+Assertion passed for index: 93
+Index: 94, Number of indices: 1239
+Assertion passed for index: 94
+Index: 95, Number of indices: 1239
+Assertion passed for index: 95
+Index: 94, Number of indices: 1239
+Assertion passed for index: 94
+Index: 95, Number of indices: 1239
+Assertion passed for index: 95
+Index: 96, Number of indices: 1239
+Assertion passed for index: 96
+Index: 95, Number of indices: 1239
+Assertion passed for index: 95
+Index: 96, Number of indices: 1239
+Assertion passed for index: 96
+Index: 97, Number of indices: 1239
+Assertion passed for index: 97
+
+Testing sparkling-frog-73:   1%|█▋                                                                                                                                                              | 52/4990 [00:07<09:52,  8.34it/s]
+Assertion passed for index: 96
+Index: 97, Number of indices: 1239
+Assertion passed for index: 97
+Index: 98, Number of indices: 1239
+Assertion passed for index: 98
+Index: 97, Number of indices: 1239
+Assertion passed for index: 97
+Index: 98, Number of indices: 1239
+Assertion passed for index: 98
+Index: 99, Number of indices: 1239
+Assertion passed for index: 99
+Index: 98, Number of indices: 1239
+Assertion passed for index: 98
+Index: 99, Number of indices: 1239
+Assertion passed for index: 99
+Index: 100, Number of indices: 1239
+Assertion passed for index: 100
+Index: 99, Number of indices: 1239
+Assertion passed for index: 99
+Index: 100, Number of indices: 1239
+Assertion passed for index: 100
+Index: 101, Number of indices: 1239
+Assertion passed for index: 101
+Index: 100, Number of indices: 1239
+Assertion passed for index: 100
+Index: 101, Number of indices: 1239
+Assertion passed for index: 101
+Index: 102, Number of indices: 1239
+Assertion passed for index: 102
+Index: 101, Number of indices: 1239
+Assertion passed for index: 101
+Index: 102, Number of indices: 1239
+Assertion passed for index: 102
+Index: 103, Number of indices: 1239
+Assertion passed for index: 103
+Index: 102, Number of indices: 1239
+Assertion passed for index: 102
+Index: 103, Number of indices: 1239
+Assertion passed for index: 103
+Index: 104, Number of indices: 1239
+Assertion passed for index: 104
+Index: 103, Number of indices: 1239
+Assertion passed for index: 103
+Index: 104, Number of indices: 1239
+Assertion passed for index: 104
+Index: 105, Number of indices: 1239
+Assertion passed for index: 105
+Index: 104, Number of indices: 1239
+Assertion passed for index: 104
+Index: 106, Number of indices: 1239
+Assertion passed for index: 106
+Index: 107, Number of indices: 1239
+Assertion passed for index: 107
+Index: 106, Number of indices: 1239
+Assertion passed for index: 106
+Index: 107, Number of indices: 1239
+Assertion passed for index: 107
+Index: 108, Number of indices: 1239
+Assertion passed for index: 108
+Index: 107, Number of indices: 1239
+Assertion passed for index: 107
+Index: 108, Number of indices: 1239
+Assertion passed for index: 108
+Index: 109, Number of indices: 1239
+Assertion passed for index: 109
+Index: 108, Number of indices: 1239
+Assertion passed for index: 108
+Index: 109, Number of indices: 1239
+Assertion passed for index: 109
+Index: 110, Number of indices: 1239
+Assertion passed for index: 110
+Index: 109, Number of indices: 1239
+Assertion passed for index: 109
+Index: 112, Number of indices: 1239
+Assertion passed for index: 112
+Index: 113, Number of indices: 1239
+Assertion passed for index: 113
+Index: 112, Number of indices: 1239
+Assertion passed for index: 112
+Index: 114, Number of indices: 1239
+Assertion passed for index: 114
+Index: 115, Number of indices: 1239
+Assertion passed for index: 115
+Index: 114, Number of indices: 1239
+Assertion passed for index: 114
+Index: 121, Number of indices: 1239
+Assertion passed for index: 121
+Index: 122, Number of indices: 1239
+Assertion passed for index: 122
+Index: 121, Number of indices: 1239
+Assertion passed for index: 121
+Index: 123, Number of indices: 1239
+Assertion passed for index: 123
+Index: 124, Number of indices: 1239
+Assertion passed for index: 124
+Index: 123, Number of indices: 1239
+Assertion passed for index: 123
+Index: 124, Number of indices: 1239
+Assertion passed for index: 124
+Index: 125, Number of indices: 1239
+Assertion passed for index: 125
+Index: 124, Number of indices: 1239
+Assertion passed for index: 124
+Index: 126, Number of indices: 1239
+Assertion passed for index: 126
+Index: 127, Number of indices: 1239
+Assertion passed for index: 127
+Index: 126, Number of indices: 1239
+Assertion passed for index: 126
+Index: 127, Number of indices: 1239
+Assertion passed for index: 127
+Index: 128, Number of indices: 1239
+Assertion passed for index: 128
+Index: 127, Number of indices: 1239
+Assertion passed for index: 127
+Index: 128, Number of indices: 1239
+Assertion passed for index: 128
+Index: 129, Number of indices: 1239
+Assertion passed for index: 129
+Index: 128, Number of indices: 1239
+Assertion passed for index: 128
+Index: 129, Number of indices: 1239
+Assertion passed for index: 129
+Index: 130, Number of indices: 1239
+Assertion passed for index: 130
+Index: 129, Number of indices: 1239
+Assertion passed for index: 129
+Index: 131, Number of indices: 1239
+Assertion passed for index: 131
+Index: 132, Number of indices: 1239
+Assertion passed for index: 132
+Index: 131, Number of indices: 1239
+Assertion passed for index: 131
+Index: 133, Number of indices: 1239
+Assertion passed for index: 133
+Index: 134, Number of indices: 1239
+Assertion passed for index: 134
+Index: 133, Number of indices: 1239
+Assertion passed for index: 133
+Index: 134, Number of indices: 1239
+Assertion passed for index: 134
+Index: 135, Number of indices: 1239
+Assertion passed for index: 135
+
+Assertion passed for index: 146239
+Index: 145, Number of indices: 1239
+Assertion passed for index: 145
+Index: 146, Number of indices: 1239
+Assertion passed for index: 146
+Index: 147, Number of indices: 1239
+Assertion passed for index: 147
+Index: 146, Number of indices: 1239
+Assertion passed for index: 146
+Index: 147, Number of indices: 1239
+Assertion passed for index: 147
+Index: 148, Number of indices: 1239
+Assertion passed for index: 148
+Index: 147, Number of indices: 1239
+Assertion passed for index: 147
+Index: 148, Number of indices: 1239
+Assertion passed for index: 148
+Index: 149, Number of indices: 1239
+Assertion passed for index: 149
+Index: 148, Number of indices: 1239
+Assertion passed for index: 148
+Index: 149, Number of indices: 1239
+Assertion passed for index: 149
+Index: 150, Number of indices: 1239
+Assertion passed for index: 150
+Index: 149, Number of indices: 1239
+Assertion passed for index: 149
+Index: 150, Number of indices: 1239
+Assertion passed for index: 150
+Index: 151, Number of indices: 1239
+Assertion passed for index: 151
+Index: 150, Number of indices: 1239
+Assertion passed for index: 150
+Index: 151, Number of indices: 1239
+Assertion passed for index: 151
+Index: 152, Number of indices: 1239
+Assertion passed for index: 152
+Index: 151, Number of indices: 1239
+Assertion passed for index: 151
+Index: 153, Number of indices: 1239
+Assertion passed for index: 153
+Index: 154, Number of indices: 1239
+Assertion passed for index: 154
+Index: 153, Number of indices: 1239
+Assertion passed for index: 153
+Index: 154, Number of indices: 1239
+Assertion passed for index: 154
+Index: 155, Number of indices: 1239
+Assertion passed for index: 155
+Index: 154, Number of indices: 1239
+Assertion passed for index: 154
+Index: 161, Number of indices: 1239
+Assertion passed for index: 161
+Index: 162, Number of indices: 1239
+Assertion passed for index: 162
+Index: 161, Number of indices: 1239
+Assertion passed for index: 161
+Index: 162, Number of indices: 1239
+Assertion passed for index: 162
+Index: 163, Number of indices: 1239
+Assertion passed for index: 163
+Index: 162, Number of indices: 1239
+Assertion passed for index: 162
+Index: 163, Number of indices: 1239
+Assertion passed for index: 163
+Index: 164, Number of indices: 1239
+Assertion passed for index: 164
+Index: 163, Number of indices: 1239
+Assertion passed for index: 163
+Index: 164, Number of indices: 1239
+Assertion passed for index: 164
+Index: 165, Number of indices: 1239
+Assertion passed for index: 165
+Index: 164, Number of indices: 1239
+Assertion passed for index: 164
+Index: 165, Number of indices: 1239
+Assertion passed for index: 165
+Index: 166, Number of indices: 1239
+Assertion passed for index: 166
+Index: 165, Number of indices: 1239
+Assertion passed for index: 165
+
+Index: 189, Number of indices: 1239
+Assertion passed for index: 189
+
+Assertion passed for index: 2161239
+Index: 217, Number of indices: 1239
+Assertion passed for index: 217
+Index: 216, Number of indices: 1239
+Assertion passed for index: 216
+Index: 217, Number of indices: 1239
+Assertion passed for index: 217
+Index: 218, Number of indices: 1239
+Assertion passed for index: 218
+Index: 217, Number of indices: 1239
+Assertion passed for index: 217
+Index: 219, Number of indices: 1239
+Assertion passed for index: 219
+Index: 220, Number of indices: 1239
+Assertion passed for index: 220
+Index: 219, Number of indices: 1239
+Assertion passed for index: 219
+Index: 220, Number of indices: 1239
+Assertion passed for index: 220
+Index: 221, Number of indices: 1239
+Assertion passed for index: 221
+
+Assertion passed for index: 2441239
+Index: 245, Number of indices: 1239
+Assertion passed for index: 245
+Index: 244, Number of indices: 1239
+Assertion passed for index: 244
+Index: 245, Number of indices: 1239
+Assertion passed for index: 245
+Index: 246, Number of indices: 1239
+Assertion passed for index: 246
+Index: 245, Number of indices: 1239
+Assertion passed for index: 245
+Index: 246, Number of indices: 1239
+Assertion passed for index: 246
+Index: 247, Number of indices: 1239
+Assertion passed for index: 247
+Index: 246, Number of indices: 1239
+Assertion passed for index: 246
+
+Testing sparkling-frog-73:   2%|███                                                                                                                                                             | 97/4990 [00:17<20:51,  3.91it/s]
+
+Testing sparkling-frog-73:   2%|███▍                                                                                                                                                           | 106/4990 [00:19<18:17,  4.45it/s]
+
+Assertion passed for index: 3081239
+Index: 307, Number of indices: 1239
+Assertion passed for index: 307
+Index: 308, Number of indices: 1239
+Assertion passed for index: 308
+Index: 309, Number of indices: 1239
+Assertion passed for index: 309
+Index: 308, Number of indices: 1239
+Assertion passed for index: 308
+Index: 309, Number of indices: 1239
+Assertion passed for index: 309
+Index: 310, Number of indices: 1239
+Assertion passed for index: 310
+Index: 309, Number of indices: 1239
+Assertion passed for index: 309
+Index: 311, Number of indices: 1239
+Assertion passed for index: 311
+Index: 312, Number of indices: 1239
+Assertion passed for index: 312
+Index: 311, Number of indices: 1239
+Assertion passed for index: 311
+Index: 312, Number of indices: 1239
+Assertion passed for index: 312
+Index: 313, Number of indices: 1239
+Assertion passed for index: 313
+Index: 312, Number of indices: 1239
+Assertion passed for index: 312
+Index: 314, Number of indices: 1239
+Assertion passed for index: 314
+Index: 315, Number of indices: 1239
+Assertion passed for index: 315
+Index: 314, Number of indices: 1239
+Assertion passed for index: 314
+
+Assertion passed for index: 3401239
+Index: 339, Number of indices: 1239
+Assertion passed for index: 339
+Index: 340, Number of indices: 1239
+Assertion passed for index: 340
+Index: 341, Number of indices: 1239
+Assertion passed for index: 341
+Index: 340, Number of indices: 1239
+Assertion passed for index: 340
+Index: 341, Number of indices: 1239
+Assertion passed for index: 341
+Index: 342, Number of indices: 1239
+Assertion passed for index: 342
+Index: 341, Number of indices: 1239
+Assertion passed for index: 341
+Index: 342, Number of indices: 1239
+Assertion passed for index: 342
+Index: 343, Number of indices: 1239
+Assertion passed for index: 343
+Index: 342, Number of indices: 1239
+Assertion passed for index: 342
+Index: 343, Number of indices: 1239
+Assertion passed for index: 343
+Index: 344, Number of indices: 1239
+Assertion passed for index: 344
+Testing sparkling-frog-73:   3%|████▎                                                                                                                                                          | 134/4990 [00:25<14:33,  5.56it/s][34m[1mwandb[39m[22m: 429 encountered (Filestream rate limit exceeded, retrying in 2.5 seconds.), retrying request
+Assertion passed for index: 3721239
+Index: 373, Number of indices: 1239
+Assertion passed for index: 373
+Index: 372, Number of indices: 1239
+Assertion passed for index: 372
+Index: 373, Number of indices: 1239
+Assertion passed for index: 373
+Index: 374, Number of indices: 1239
+Assertion passed for index: 374
+Index: 373, Number of indices: 1239
+Assertion passed for index: 373
+Index: 376, Number of indices: 1239
+Assertion passed for index: 376
+Index: 377, Number of indices: 1239
+Assertion passed for index: 377
+Index: 376, Number of indices: 1239
+Assertion passed for index: 376
+Index: 377, Number of indices: 1239
+Assertion passed for index: 377
+Index: 378, Number of indices: 1239
+Assertion passed for index: 378
+Index: 377, Number of indices: 1239
+Assertion passed for index: 377
+Index: 380, Number of indices: 1239
+Assertion passed for index: 380
+Index: 381, Number of indices: 1239
+Assertion passed for index: 381
+Index: 380, Number of indices: 1239
+Assertion passed for index: 380
+Index: 381, Number of indices: 1239
+Assertion passed for index: 381
+Index: 382, Number of indices: 1239
+Assertion passed for index: 382
+Index: 381, Number of indices: 1239
+Assertion passed for index: 381
+
+Assertion passed for index: 4061239
+Index: 405, Number of indices: 1239
+Assertion passed for index: 405
+Index: 406, Number of indices: 1239
+Assertion passed for index: 406
+Index: 407, Number of indices: 1239
+Assertion passed for index: 407
+Index: 406, Number of indices: 1239
+Assertion passed for index: 406
+Index: 407, Number of indices: 1239
+Assertion passed for index: 407
+Index: 408, Number of indices: 1239
+Assertion passed for index: 408
+Index: 407, Number of indices: 1239
+Assertion passed for index: 407
+Index: 408, Number of indices: 1239
+Assertion passed for index: 408
+Index: 409, Number of indices: 1239
+Assertion passed for index: 409
+
+Index: 427, Number of indices: 1239
+Assertion passed for index: 427
+Index: 428, Number of indices: 1239
+Assertion passed for index: 428
+Index: 427, Number of indices: 1239
+Assertion passed for index: 427
+Index: 428, Number of indices: 1239
+Assertion passed for index: 428
+Index: 429, Number of indices: 1239
+Assertion passed for index: 429
+Index: 428, Number of indices: 1239
+Assertion passed for index: 428
+Index: 429, Number of indices: 1239
+Assertion passed for index: 429
+Index: 430, Number of indices: 1239
+Assertion passed for index: 430
+Index: 429, Number of indices: 1239
+Assertion passed for index: 429
+Index: 430, Number of indices: 1239
+Assertion passed for index: 430
+Index: 431, Number of indices: 1239
+Assertion passed for index: 431
+Index: 430, Number of indices: 1239
+Assertion passed for index: 430
+Index: 431, Number of indices: 1239
+Assertion passed for index: 431
+Index: 432, Number of indices: 1239
+Assertion passed for index: 432
+Index: 431, Number of indices: 1239
+Assertion passed for index: 431
+
+Assertion passed for index: 4541239
+Index: 453, Number of indices: 1239
+Assertion passed for index: 453
+Index: 454, Number of indices: 1239
+Assertion passed for index: 454
+Index: 455, Number of indices: 1239
+Assertion passed for index: 455
+Index: 454, Number of indices: 1239
+Assertion passed for index: 454
+Index: 455, Number of indices: 1239
+Assertion passed for index: 455
+Index: 456, Number of indices: 1239
+Assertion passed for index: 456
+Index: 455, Number of indices: 1239
+Assertion passed for index: 455
+Index: 456, Number of indices: 1239
+Assertion passed for index: 456
+Index: 457, Number of indices: 1239
+Assertion passed for index: 457
+Index: 456, Number of indices: 1239
+Assertion passed for index: 456
+Index: 457, Number of indices: 1239
+Assertion passed for index: 457
+Index: 458, Number of indices: 1239
+Assertion passed for index: 458
+Index: 457, Number of indices: 1239
+Assertion passed for index: 457
+Index: 458, Number of indices: 1239
+Assertion passed for index: 458
+Index: 459, Number of indices: 1239
+Assertion passed for index: 459
+Index: 458, Number of indices: 1239
+Assertion passed for index: 458
+
+Assertion passed for index: 4901239
+Index: 489, Number of indices: 1239
+Assertion passed for index: 489
+Index: 490, Number of indices: 1239
+Assertion passed for index: 490
+Index: 491, Number of indices: 1239
+Assertion passed for index: 491
+Index: 490, Number of indices: 1239
+Assertion passed for index: 490
+Index: 491, Number of indices: 1239
+Assertion passed for index: 491
+Index: 492, Number of indices: 1239
+Assertion passed for index: 492
+Index: 491, Number of indices: 1239
+Assertion passed for index: 491
+Index: 493, Number of indices: 1239
+Assertion passed for index: 493
+Index: 494, Number of indices: 1239
+Assertion passed for index: 494
+Index: 493, Number of indices: 1239
+Assertion passed for index: 493
+Index: 494, Number of indices: 1239
+Assertion passed for index: 494
+Index: 495, Number of indices: 1239
+Assertion passed for index: 495
+Index: 494, Number of indices: 1239
+Assertion passed for index: 494
+Index: 495, Number of indices: 1239
+Assertion passed for index: 495
+Index: 496, Number of indices: 1239
+Assertion passed for index: 496
+Index: 495, Number of indices: 1239
+Assertion passed for index: 495
+Index: 496, Number of indices: 1239
+Assertion passed for index: 496
+Index: 497, Number of indices: 1239
+Assertion passed for index: 497
+Index: 496, Number of indices: 1239
+Assertion passed for index: 496
+Index: 497, Number of indices: 1239
+Assertion passed for index: 497
+Index: 498, Number of indices: 1239
+Assertion passed for index: 498
+Index: 497, Number of indices: 1239
+Assertion passed for index: 497
+Index: 498, Number of indices: 1239
+Assertion passed for index: 498
+Index: 499, Number of indices: 1239
+Assertion passed for index: 499
+Index: 498, Number of indices: 1239
+Assertion passed for index: 498
+Index: 499, Number of indices: 1239
+Assertion passed for index: 499
+Index: 500, Number of indices: 1239
+Assertion passed for index: 500
+Index: 499, Number of indices: 1239
+Assertion passed for index: 499
+
+Assertion passed for index: 5211239
+Index: 520, Number of indices: 1239
+Assertion passed for index: 520
+Index: 521, Number of indices: 1239
+Assertion passed for index: 521
+Index: 522, Number of indices: 1239
+Assertion passed for index: 522
+Index: 521, Number of indices: 1239
+Assertion passed for index: 521
+Index: 522, Number of indices: 1239
+Assertion passed for index: 522
+Index: 523, Number of indices: 1239
+Assertion passed for index: 523
+Index: 522, Number of indices: 1239
+Assertion passed for index: 522
+Index: 523, Number of indices: 1239
+Assertion passed for index: 523
+Index: 524, Number of indices: 1239
+Assertion passed for index: 524
+Index: 523, Number of indices: 1239
+Assertion passed for index: 523
+Index: 524, Number of indices: 1239
+Assertion passed for index: 524
+Index: 525, Number of indices: 1239
+Assertion passed for index: 525
+Index: 524, Number of indices: 1239
+Assertion passed for index: 524
+Index: 525, Number of indices: 1239
+Assertion passed for index: 525
+Index: 526, Number of indices: 1239
+Assertion passed for index: 526
+Index: 525, Number of indices: 1239
+Assertion passed for index: 525
+Index: 530, Number of indices: 1239
+Assertion passed for index: 530
+Index: 531, Number of indices: 1239
+Assertion passed for index: 531
+Index: 530, Number of indices: 1239
+Assertion passed for index: 530
+Index: 531, Number of indices: 1239
+Assertion passed for index: 531
+Index: 532, Number of indices: 1239
+Assertion passed for index: 532
+Index: 531, Number of indices: 1239
+Assertion passed for index: 531
+Index: 534, Number of indices: 1239
+Assertion passed for index: 534
+Index: 535, Number of indices: 1239
+Assertion passed for index: 535
+Index: 534, Number of indices: 1239
+Assertion passed for index: 534
+Index: 535, Number of indices: 1239
+Assertion passed for index: 535
+Index: 536, Number of indices: 1239
+Assertion passed for index: 536
+Index: 535, Number of indices: 1239
+Assertion passed for index: 535
+Index: 537, Number of indices: 1239
+Assertion passed for index: 537
+Index: 538, Number of indices: 1239
+Assertion passed for index: 538
+Index: 537, Number of indices: 1239
+Assertion passed for index: 537
+Index: 541, Number of indices: 1239
+Assertion passed for index: 541
+Index: 542, Number of indices: 1239
+Assertion passed for index: 542
+Index: 541, Number of indices: 1239
+Assertion passed for index: 541
+Index: 546, Number of indices: 1239
+Assertion passed for index: 546
+Index: 547, Number of indices: 1239
+Assertion passed for index: 547
+
+Assertion passed for index: 5661239
+Index: 567, Number of indices: 1239
+Assertion passed for index: 567
+Index: 566, Number of indices: 1239
+Assertion passed for index: 566
+Index: 570, Number of indices: 1239
+Assertion passed for index: 570
+Index: 571, Number of indices: 1239
+Assertion passed for index: 571
+Index: 570, Number of indices: 1239
+Assertion passed for index: 570
+Index: 572, Number of indices: 1239
+Assertion passed for index: 572
+Index: 573, Number of indices: 1239
+Assertion passed for index: 573
+Index: 572, Number of indices: 1239
+Assertion passed for index: 572
+Index: 576, Number of indices: 1239
+Assertion passed for index: 576
+Index: 577, Number of indices: 1239
+Assertion passed for index: 577
+Index: 576, Number of indices: 1239
+Assertion passed for index: 576
+Index: 577, Number of indices: 1239
+Assertion passed for index: 577
+Index: 578, Number of indices: 1239
+Assertion passed for index: 578
+Index: 577, Number of indices: 1239
+Assertion passed for index: 577
+Index: 578, Number of indices: 1239
+Assertion passed for index: 578
+Index: 579, Number of indices: 1239
+Assertion passed for index: 579
+Index: 578, Number of indices: 1239
+Assertion passed for index: 578
+Index: 579, Number of indices: 1239
+Assertion passed for index: 579
+Index: 580, Number of indices: 1239
+Assertion passed for index: 580
+Index: 579, Number of indices: 1239
+Assertion passed for index: 579
+Index: 580, Number of indices: 1239
+Assertion passed for index: 580
+Index: 581, Number of indices: 1239
+Assertion passed for index: 581
+Index: 580, Number of indices: 1239
+Assertion passed for index: 580
+Index: 581, Number of indices: 1239
+Assertion passed for index: 581
+Index: 582, Number of indices: 1239
+Assertion passed for index: 582
+Index: 581, Number of indices: 1239
+Assertion passed for index: 581
+
+Assertion passed for index: 6001239
+Index: 599, Number of indices: 1239
+Assertion passed for index: 599
+Index: 600, Number of indices: 1239
+Assertion passed for index: 600
+Index: 601, Number of indices: 1239
+Assertion passed for index: 601
+Index: 600, Number of indices: 1239
+Assertion passed for index: 600
+Index: 601, Number of indices: 1239
+Assertion passed for index: 601
+Index: 602, Number of indices: 1239
+Assertion passed for index: 602
+Index: 601, Number of indices: 1239
+Assertion passed for index: 601
+Index: 603, Number of indices: 1239
+Assertion passed for index: 603
+Index: 604, Number of indices: 1239
+Assertion passed for index: 604
+Index: 603, Number of indices: 1239
+Assertion passed for index: 603
+Index: 604, Number of indices: 1239
+Assertion passed for index: 604
+Index: 605, Number of indices: 1239
+Assertion passed for index: 605
+
+Assertion passed for index: 6371239
+Index: 638, Number of indices: 1239
+Assertion passed for index: 638
+Index: 637, Number of indices: 1239
+Assertion passed for index: 637
+Index: 638, Number of indices: 1239
+Assertion passed for index: 638
+Index: 639, Number of indices: 1239
+Assertion passed for index: 639
+Index: 638, Number of indices: 1239
+Assertion passed for index: 638
+Index: 639, Number of indices: 1239
+Assertion passed for index: 639
+Index: 640, Number of indices: 1239
+Assertion passed for index: 640
+Index: 639, Number of indices: 1239
+Assertion passed for index: 639
+
+Assertion passed for index: 6641239
+Index: 663, Number of indices: 1239
+Assertion passed for index: 663
+Index: 666, Number of indices: 1239
+Assertion passed for index: 666
+Index: 667, Number of indices: 1239
+Assertion passed for index: 667
+Index: 666, Number of indices: 1239
+Assertion passed for index: 666
+Index: 668, Number of indices: 1239
+Assertion passed for index: 668
+Index: 669, Number of indices: 1239
+Assertion passed for index: 669
+Index: 668, Number of indices: 1239
+Assertion passed for index: 668
+Index: 669, Number of indices: 1239
+Assertion passed for index: 669
+Index: 670, Number of indices: 1239
+Assertion passed for index: 670
+Index: 669, Number of indices: 1239
+Assertion passed for index: 669
+
+Assertion passed for index: 6881239
+Index: 687, Number of indices: 1239
+Assertion passed for index: 687
+Index: 688, Number of indices: 1239
+Assertion passed for index: 688
+Index: 689, Number of indices: 1239
+Assertion passed for index: 689
+Index: 688, Number of indices: 1239
+Assertion passed for index: 688
+Index: 689, Number of indices: 1239
+Assertion passed for index: 689
+Index: 690, Number of indices: 1239
+Assertion passed for index: 690
+Index: 689, Number of indices: 1239
+Assertion passed for index: 689
+Index: 690, Number of indices: 1239
+Assertion passed for index: 690
+Index: 691, Number of indices: 1239
+Assertion passed for index: 691
+Index: 690, Number of indices: 1239
+Assertion passed for index: 690
+Index: 691, Number of indices: 1239
+Assertion passed for index: 691
+Index: 692, Number of indices: 1239
+Assertion passed for index: 692
+
+Assertion passed for index: 7091239
+Index: 710, Number of indices: 1239
+Assertion passed for index: 710
+Index: 709, Number of indices: 1239
+Assertion passed for index: 709
+Index: 710, Number of indices: 1239
+Assertion passed for index: 710
+Index: 711, Number of indices: 1239
+Assertion passed for index: 711
+Index: 710, Number of indices: 1239
+Assertion passed for index: 710
+Index: 712, Number of indices: 1239
+Assertion passed for index: 712
+Index: 713, Number of indices: 1239
+Assertion passed for index: 713
+Index: 712, Number of indices: 1239
+Assertion passed for index: 712
+Index: 713, Number of indices: 1239
+Assertion passed for index: 713
+Index: 714, Number of indices: 1239
+Assertion passed for index: 714
+Index: 713, Number of indices: 1239
+Assertion passed for index: 713
+Index: 714, Number of indices: 1239
+Assertion passed for index: 714
+Index: 715, Number of indices: 1239
+Assertion passed for index: 715
+Index: 714, Number of indices: 1239
+Assertion passed for index: 714
+
+Assertion passed for index: 7321239
+Index: 731, Number of indices: 1239
+Assertion passed for index: 731
+Index: 732, Number of indices: 1239
+Assertion passed for index: 732
+Index: 733, Number of indices: 1239
+Assertion passed for index: 733
+Index: 732, Number of indices: 1239
+Assertion passed for index: 732
+Index: 733, Number of indices: 1239
+Assertion passed for index: 733
+Index: 734, Number of indices: 1239
+Assertion passed for index: 734
+Index: 733, Number of indices: 1239
+Assertion passed for index: 733
+Index: 734, Number of indices: 1239
+Assertion passed for index: 734
+Index: 735, Number of indices: 1239
+Assertion passed for index: 735
+Index: 734, Number of indices: 1239
+Assertion passed for index: 734
+Index: 735, Number of indices: 1239
+Assertion passed for index: 735
+Index: 736, Number of indices: 1239
+Assertion passed for index: 736
+Index: 735, Number of indices: 1239
+Assertion passed for index: 735
+
+Assertion passed for index: 7561239
+Index: 755, Number of indices: 1239
+Assertion passed for index: 755
+Index: 756, Number of indices: 1239
+Assertion passed for index: 756
+Index: 757, Number of indices: 1239
+Assertion passed for index: 757
+Index: 756, Number of indices: 1239
+Assertion passed for index: 756
+Index: 757, Number of indices: 1239
+Assertion passed for index: 757
+Index: 758, Number of indices: 1239
+Assertion passed for index: 758
+Index: 757, Number of indices: 1239
+Assertion passed for index: 757
+
+Assertion passed for index: 7781239
+Index: 777, Number of indices: 1239
+Assertion passed for index: 777
+Index: 778, Number of indices: 1239
+Assertion passed for index: 778
+Index: 779, Number of indices: 1239
+Assertion passed for index: 779
+Index: 778, Number of indices: 1239
+Assertion passed for index: 778
+Index: 779, Number of indices: 1239
+Assertion passed for index: 779
+Index: 780, Number of indices: 1239
+Assertion passed for index: 780
+Index: 779, Number of indices: 1239
+Assertion passed for index: 779
+Index: 780, Number of indices: 1239
+Assertion passed for index: 780
+Index: 781, Number of indices: 1239
+Assertion passed for index: 781
+Index: 780, Number of indices: 1239
+Assertion passed for index: 780
+
+Testing sparkling-frog-73:   6%|█████████▍                                                                                                                                                     | 298/4990 [00:56<14:17,  5.47it/s]
+
+Assertion passed for index: 8151239
+Index: 816, Number of indices: 1239
+Assertion passed for index: 816
+Index: 815, Number of indices: 1239
+Assertion passed for index: 815
+Index: 816, Number of indices: 1239
+Assertion passed for index: 816
+Index: 817, Number of indices: 1239
+Assertion passed for index: 817
+Index: 816, Number of indices: 1239
+Assertion passed for index: 816
+Index: 817, Number of indices: 1239
+Assertion passed for index: 817
+Index: 818, Number of indices: 1239
+Assertion passed for index: 818
+Index: 817, Number of indices: 1239
+Assertion passed for index: 817
+Index: 818, Number of indices: 1239
+Assertion passed for index: 818
+Index: 819, Number of indices: 1239
+Assertion passed for index: 819
+Index: 818, Number of indices: 1239
+Assertion passed for index: 818
+
+Assertion passed for index: 8431239
+Index: 842, Number of indices: 1239
+Assertion passed for index: 842
+Index: 843, Number of indices: 1239
+Assertion passed for index: 843
+Index: 844, Number of indices: 1239
+Assertion passed for index: 844
+Index: 843, Number of indices: 1239
+Assertion passed for index: 843
+Index: 844, Number of indices: 1239
+Assertion passed for index: 844
+Index: 845, Number of indices: 1239
+Assertion passed for index: 845
+Index: 844, Number of indices: 1239
+Assertion passed for index: 844
+Index: 845, Number of indices: 1239
+Assertion passed for index: 845
+Index: 846, Number of indices: 1239
+Assertion passed for index: 846
+Index: 845, Number of indices: 1239
+Assertion passed for index: 845
+Index: 847, Number of indices: 1239
+Assertion passed for index: 847
+Index: 848, Number of indices: 1239
+Assertion passed for index: 848
+Index: 847, Number of indices: 1239
+Assertion passed for index: 847
+
+Assertion passed for index: 8891239
+Index: 888, Number of indices: 1239
+Assertion passed for index: 888
+Index: 889, Number of indices: 1239
+Assertion passed for index: 889
+Index: 890, Number of indices: 1239
+Assertion passed for index: 890
+Index: 889, Number of indices: 1239
+Assertion passed for index: 889
+Index: 890, Number of indices: 1239
+Assertion passed for index: 890
+Index: 891, Number of indices: 1239
+Assertion passed for index: 891
+Index: 890, Number of indices: 1239
+Assertion passed for index: 890
+Index: 892, Number of indices: 1239
+Assertion passed for index: 892
+Index: 893, Number of indices: 1239
+Assertion passed for index: 893
+Index: 892, Number of indices: 1239
+Assertion passed for index: 892
+Index: 893, Number of indices: 1239
+Assertion passed for index: 893
+Index: 894, Number of indices: 1239
+Assertion passed for index: 894
+Index: 893, Number of indices: 1239
+Assertion passed for index: 893
+Index: 894, Number of indices: 1239
+Assertion passed for index: 894
+Index: 895, Number of indices: 1239
+Assertion passed for index: 895
+Index: 894, Number of indices: 1239
+Assertion passed for index: 894
+Index: 895, Number of indices: 1239
+Assertion passed for index: 895
+Index: 896, Number of indices: 1239
+Assertion passed for index: 896
+Index: 895, Number of indices: 1239
+Assertion passed for index: 895
+
+Assertion passed for index: 9331239
+Index: 932, Number of indices: 1239
+Assertion passed for index: 932
+Index: 933, Number of indices: 1239
+Assertion passed for index: 933
+Index: 934, Number of indices: 1239
+Assertion passed for index: 934
+Index: 933, Number of indices: 1239
+Assertion passed for index: 933
+Index: 934, Number of indices: 1239
+Assertion passed for index: 934
+Index: 935, Number of indices: 1239
+Assertion passed for index: 935
+Index: 934, Number of indices: 1239
+Assertion passed for index: 934
+Index: 935, Number of indices: 1239
+Assertion passed for index: 935
+Index: 936, Number of indices: 1239
+Assertion passed for index: 936
+Index: 935, Number of indices: 1239
+Assertion passed for index: 935
+Index: 936, Number of indices: 1239
+Assertion passed for index: 936
+Index: 937, Number of indices: 1239
+Assertion passed for index: 937
+Index: 936, Number of indices: 1239
+Assertion passed for index: 936
+Index: 937, Number of indices: 1239
+Assertion passed for index: 937
+Index: 938, Number of indices: 1239
+Assertion passed for index: 938
+Index: 937, Number of indices: 1239
+Assertion passed for index: 937
+Index: 938, Number of indices: 1239
+Assertion passed for index: 938
+Index: 939, Number of indices: 1239
+Assertion passed for index: 939
+Index: 938, Number of indices: 1239
+Assertion passed for index: 938
+Index: 939, Number of indices: 1239
+Assertion passed for index: 939
+Index: 940, Number of indices: 1239
+Assertion passed for index: 940
+
+Testing sparkling-frog-73:   7%|███████████                                                                                                                                                    | 348/4990 [01:05<16:01,  4.83it/s]
+
+Testing sparkling-frog-73:   7%|███████████▎                                                                                                                                                   | 356/4990 [01:07<18:41,  4.13it/s]
+
+Testing sparkling-frog-73:   7%|███████████▌                                                                                                                                                   | 363/4990 [01:10<22:51,  3.37it/s]
+
+Testing sparkling-frog-73:   7%|███████████▊                                                                                                                                                   | 372/4990 [01:12<17:12,  4.47it/s]
+
+Assertion passed for index: 1035239
+Index: 1036, Number of indices: 1239
+Assertion passed for index: 1036
+Index: 1035, Number of indices: 1239
+Assertion passed for index: 1035
+Index: 1036, Number of indices: 1239
+Assertion passed for index: 1036
+Index: 1037, Number of indices: 1239
+Assertion passed for index: 1037
+Index: 1036, Number of indices: 1239
+Assertion passed for index: 1036
+Index: 1037, Number of indices: 1239
+Assertion passed for index: 1037
+Index: 1038, Number of indices: 1239
+Assertion passed for index: 1038
+Index: 1037, Number of indices: 1239
+Assertion passed for index: 1037
+Index: 1038, Number of indices: 1239
+Assertion passed for index: 1038
+Index: 1039, Number of indices: 1239
+Assertion passed for index: 1039
+Index: 1038, Number of indices: 1239
+Assertion passed for index: 1038
+Index: 1039, Number of indices: 1239
+Assertion passed for index: 1039
+Index: 1040, Number of indices: 1239
+Assertion passed for index: 1040
+Index: 1039, Number of indices: 1239
+Assertion passed for index: 1039
+Index: 1040, Number of indices: 1239
+Assertion passed for index: 1040
+Index: 1041, Number of indices: 1239
+Assertion passed for index: 1041
+Index: 1040, Number of indices: 1239
+Assertion passed for index: 1040
+Index: 1041, Number of indices: 1239
+Assertion passed for index: 1041
+Index: 1042, Number of indices: 1239
+Assertion passed for index: 1042
+Index: 1041, Number of indices: 1239
+Assertion passed for index: 1041
+
+Assertion passed for index: 1060239
+Index: 1059, Number of indices: 1239
+Assertion passed for index: 1059
+Index: 1060, Number of indices: 1239
+Assertion passed for index: 1060
+Index: 1061, Number of indices: 1239
+Assertion passed for index: 1061
+Index: 1060, Number of indices: 1239
+Assertion passed for index: 1060
+Index: 1061, Number of indices: 1239
+Assertion passed for index: 1061
+Index: 1062, Number of indices: 1239
+Assertion passed for index: 1062
+Index: 1061, Number of indices: 1239
+Assertion passed for index: 1061
+Index: 1062, Number of indices: 1239
+Assertion passed for index: 1062
+Index: 1063, Number of indices: 1239
+Assertion passed for index: 1063
+Index: 1062, Number of indices: 1239
+Assertion passed for index: 1062
+Index: 1063, Number of indices: 1239
+Assertion passed for index: 1063
+Index: 1064, Number of indices: 1239
+Assertion passed for index: 1064
+Index: 1063, Number of indices: 1239
+Assertion passed for index: 1063
+Index: 1064, Number of indices: 1239
+Assertion passed for index: 1064
+Index: 1065, Number of indices: 1239
+Assertion passed for index: 1065
+Index: 1064, Number of indices: 1239
+Assertion passed for index: 1064
+
+Assertion passed for index: 1115239
+
+Assertion passed for index: 1134239
+Index: 1135, Number of indices: 1239
+Assertion passed for index: 1135
+Index: 1134, Number of indices: 1239
+Assertion passed for index: 1134
+Index: 1135, Number of indices: 1239
+Assertion passed for index: 1135
+Index: 1136, Number of indices: 1239
+Assertion passed for index: 1136
+Index: 1135, Number of indices: 1239
+Assertion passed for index: 1135
+Index: 1136, Number of indices: 1239
+Assertion passed for index: 1136
+Index: 1137, Number of indices: 1239
+Assertion passed for index: 1137
+Index: 1136, Number of indices: 1239
+Assertion passed for index: 1136
+Index: 1137, Number of indices: 1239
+Assertion passed for index: 1137
+Index: 1138, Number of indices: 1239
+Assertion passed for index: 1138
+Index: 1137, Number of indices: 1239
+Assertion passed for index: 1137
+Index: 1138, Number of indices: 1239
+Assertion passed for index: 1138
+Index: 1139, Number of indices: 1239
+Assertion passed for index: 1139
+Index: 1138, Number of indices: 1239
+Assertion passed for index: 1138
+Index: 1140, Number of indices: 1239
+Assertion passed for index: 1140
+Index: 1141, Number of indices: 1239
+Assertion passed for index: 1141
+Index: 1140, Number of indices: 1239
+Assertion passed for index: 1140
+Index: 1141, Number of indices: 1239
+Assertion passed for index: 1141
+Index: 1142, Number of indices: 1239
+Assertion passed for index: 1142
+Index: 1141, Number of indices: 1239
+Assertion passed for index: 1141
+
+Testing sparkling-frog-73:   8%|█████████████▌                                                                                                                                                 | 424/4990 [01:22<16:58,  4.48it/s]
+
+Assertion passed for index: 1186239
+Index: 1185, Number of indices: 1239
+Assertion passed for index: 1185
+Index: 1186, Number of indices: 1239
+Assertion passed for index: 1186
+Index: 1187, Number of indices: 1239
+Assertion passed for index: 1187
+Index: 1186, Number of indices: 1239
+Assertion passed for index: 1186
+Index: 1187, Number of indices: 1239
+Assertion passed for index: 1187
+Index: 1188, Number of indices: 1239
+Assertion passed for index: 1188
+Index: 1187, Number of indices: 1239
+Assertion passed for index: 1187
+Index: 1188, Number of indices: 1239
+Assertion passed for index: 1188
+Index: 1189, Number of indices: 1239
+Assertion passed for index: 1189
+Index: 1188, Number of indices: 1239
+Assertion passed for index: 1188
+Index: 1190, Number of indices: 1239
+Assertion passed for index: 1190
+Index: 1191, Number of indices: 1239
+Assertion passed for index: 1191
+Index: 1190, Number of indices: 1239
+Assertion passed for index: 1190
+Index: 1191, Number of indices: 1239
+Assertion passed for index: 1191
+Index: 1192, Number of indices: 1239
+Assertion passed for index: 1192
+Index: 1191, Number of indices: 1239
+Assertion passed for index: 1191
+Index: 1192, Number of indices: 1239
+Assertion passed for index: 1192
+Index: 1193, Number of indices: 1239
+Assertion passed for index: 1193
+
+Assertion passed for index: 1209239
+Index: 1210, Number of indices: 1239
+Assertion passed for index: 1210
+Index: 1209, Number of indices: 1239
+Assertion passed for index: 1209
+Index: 1210, Number of indices: 1239
+Assertion passed for index: 1210
+Index: 1211, Number of indices: 1239
+Assertion passed for index: 1211
+Index: 1210, Number of indices: 1239
+Assertion passed for index: 1210
+Index: 1212, Number of indices: 1239
+Assertion passed for index: 1212
+Index: 1213, Number of indices: 1239
+Assertion passed for index: 1213
+Index: 1212, Number of indices: 1239
+Assertion passed for index: 1212
+Index: 1213, Number of indices: 1239
+Assertion passed for index: 1213
+Index: 1214, Number of indices: 1239
+Assertion passed for index: 1214
+Index: 1213, Number of indices: 1239
+Assertion passed for index: 1213
+Index: 1214, Number of indices: 1239
+Assertion passed for index: 1214
+Index: 1215, Number of indices: 1239
+Assertion passed for index: 1215
+Index: 1214, Number of indices: 1239
+Assertion passed for index: 1214
+Index: 1215, Number of indices: 1239
+Assertion passed for index: 1215
+Index: 1216, Number of indices: 1239
+Assertion passed for index: 1216
+Index: 1215, Number of indices: 1239
+Assertion passed for index: 1215
+Index: 1216, Number of indices: 1239
+Assertion passed for index: 1216
+Index: 1217, Number of indices: 1239
+Assertion passed for index: 1217
+Index: 1216, Number of indices: 1239
+Assertion passed for index: 1216
+
+Assertion passed for index: 1235239
+Index: 1234, Number of indices: 1239
+Assertion passed for index: 1234
+Index: 1235, Number of indices: 1239
+Assertion passed for index: 1235
+Index: 1236, Number of indices: 1239
+Assertion passed for index: 1236
+Index: 1235, Number of indices: 1239
+Assertion passed for index: 1235
+Index: 1236, Number of indices: 1239
+Assertion passed for index: 1236
+Index: 1237, Number of indices: 1239
+Assertion passed for index: 1237
+Index: 1236, Number of indices: 1239
+Assertion passed for index: 1236
+Index: 1237, Number of indices: 1239
+Assertion passed for index: 1237
+Index: 1237, Number of indices: 1239
+Assertion passed for index: 1237
+Testing sparkling-frog-73:   9%|██████████████▋                                                                                                                                                | 459/4990 [01:28<14:37,  5.16it/s]
+Traceback (most recent call last):
+  File "scripts/run_test_interframe.py", line 85, in <module>
+    metrics, detections_one_offset = run_test_with_visualization(test_loader, ema.ema, dataset=args.dataset, name=wandb.run.name, compile_detections=True,
+  File "/home/mlc/dagr/src/dagr/utils/testing.py", line 29, in run_test_with_visualization
+    for i, data in enumerate(tqdm.tqdm(loader, desc=f"Testing {name}")):
+  File "/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 701, in __next__
+    data = self._next_data()
+  File "/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 757, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/mlc/dagr/src/dagr/data/dsec_data.py", line 177, in __getitem__
+    detections_1 = interpolate_tracks(detections_0, detections_1, image_ts_1)
+  File "/home/mlc/dagr/src/dagr/data/dsec_data.py", line 37, in interpolate_tracks
+    assert t0 < t1
+AssertionError

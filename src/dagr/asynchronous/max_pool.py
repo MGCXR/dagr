@@ -123,7 +123,7 @@ def __graph_initialization(module, data: Data, *args, **kwargs) -> Data:
 def __graph_process(module, data, *args, **kwargs) -> Data:
     new_nodes = len(data.x) > len(module.asy_graph.x)
 
-    if new_nodes:
+    if len(data.x)==0 or new_nodes:
         new_idx = graph_new_nodes(module.asy_graph, data)
 
         module.asy_graph.x = torch.cat([module.asy_graph.x, data.x[new_idx]])

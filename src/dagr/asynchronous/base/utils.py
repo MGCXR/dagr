@@ -38,10 +38,12 @@ def graph_changed_nodes(old_data, new_data) -> Tuple[torch.Tensor, torch.Tensor]
     len_pos_old = old_data.pos.shape[0]
     x_new = new_data.x[:len_x_old] if len_x_old < new_data.x.shape[0] else new_data.x
     pos_new = new_data.pos[:len_pos_old] if len_pos_old < new_data.pos.shape[0] else new_data.pos
-    print("newdata keys", new_data.keys)
-    print("newdata diff_idx", new_data.diff_idx)
+    # print("--------------------------------------------------------------------------------------")
+    # print("newdata keys", new_data.keys)
+    # print("newdata diff_idx", new_data.diff_idx)
+    # print("--------------------------------------------------------------------------------------")
     diff_idx = asy_tools.masked_isdiff(new_data.diff_idx, x_new, old_data.x, 1e-8, 1e-5) if new_data.diff_idx.numel() > 0 else new_data.diff_idx
-    print("newdata diff_idx is ok", diff_idx)
+    # print("newdata diff_idx is ok", diff_idx)
     diff_pos_idx = asy_tools.masked_isdiff(new_data.diff_pos_idx, pos_new, old_data.pos, 1e-8, 1e-5) if new_data.diff_pos_idx.numel() > 0 else new_data.diff_pos_idx
 
     return diff_idx, diff_pos_idx

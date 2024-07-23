@@ -30,7 +30,7 @@ def __graph_processing(module: BatchNorm, data) -> torch.Tensor:
     the dense implementation. Therefore, we approximate the distribution with the initial distribution as
     num_new_events << num_initial_events.
     """
-    if len(module.asy_graph.x) < len(data.x):
+    if len(data.x)==0 or len(module.asy_graph.x) < len(data.x):
         diff_idx = graph_new_nodes(module.asy_graph, data)
         module.graph_out.x = torch.cat([module.graph_out.x, torch.zeros_like(data.x[:len(diff_idx)])])
     else:

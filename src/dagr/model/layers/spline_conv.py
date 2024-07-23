@@ -87,7 +87,13 @@ def to_dense(self, x, pos, pooling, batch=None, batch_size=None):
         batch = torch.zeros(size=(len(x),), dtype=torch.long, device=x.device)
         B = 1
         self.batch_size = B
+    # elif batch.numel() == 0:
+    #     B = 1
+    #     self.batch_size = B
     else:
+        # print("-----------------------------------------------------------------------------------------")
+        # print("batch", batch)
+        # print("-----------------------------------------------------------------------------------------")
         B = batch.max().item() + 1
         self.batch_size = B
 
