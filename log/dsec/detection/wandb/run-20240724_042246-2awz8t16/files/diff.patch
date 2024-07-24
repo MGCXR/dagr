@@ -1,0 +1,30 @@
+diff --git a/log/dsec/detection/wandb/debug-internal.log b/log/dsec/detection/wandb/debug-internal.log
+index ea8a3e7..5d23ce0 120000
+--- a/log/dsec/detection/wandb/debug-internal.log
++++ b/log/dsec/detection/wandb/debug-internal.log
+@@ -1 +1 @@
+-run-20240724_005818-ifibptdh/logs/debug-internal.log
+\ No newline at end of file
++run-20240724_042246-2awz8t16/logs/debug-internal.log
+\ No newline at end of file
+diff --git a/log/dsec/detection/wandb/debug.log b/log/dsec/detection/wandb/debug.log
+index 56b5490..ce07ca7 120000
+--- a/log/dsec/detection/wandb/debug.log
++++ b/log/dsec/detection/wandb/debug.log
+@@ -1 +1 @@
+-run-20240724_005818-ifibptdh/logs/debug.log
+\ No newline at end of file
++run-20240724_042246-2awz8t16/logs/debug.log
+\ No newline at end of file
+diff --git a/log/dsec/detection/wandb/latest-run b/log/dsec/detection/wandb/latest-run
+index ef9e374..075be78 120000
+--- a/log/dsec/detection/wandb/latest-run
++++ b/log/dsec/detection/wandb/latest-run
+@@ -1 +1 @@
+-run-20240724_005818-ifibptdh
+\ No newline at end of file
++run-20240724_042246-2awz8t16
+\ No newline at end of file
+diff --git a/log/flops_per_layer.pth b/log/flops_per_layer.pth
+index d249d56..7d0b85a 100644
+Binary files a/log/flops_per_layer.pth and b/log/flops_per_layer.pth differ

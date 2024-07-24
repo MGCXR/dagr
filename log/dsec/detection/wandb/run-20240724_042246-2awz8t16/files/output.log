@@ -1,0 +1,474 @@
+{'activation': 'relu',
+ 'after_pool_width': 1,
+ 'aggr': 'sum',
+ 'aug_p_flip': 0.5,
+ 'aug_trans': 0.1,
+ 'aug_zoom': 1.5,
+ 'base_width': 0.5,
+ 'batch_size': 2,
+ 'checkpoint': 'data/dagr_s_50.pth',
+ 'clip': 0.1,
+ 'config': 'config/dagr-s-dsec.yaml',
+ 'dataset': 'dsec',
+ 'dataset_directory': '/data/dsec',
+ 'edge_attr_dim': 2,
+ 'img_net': 'resnet50',
+ 'keep_temporal_ordering': False,
+ 'kernel_size': 5,
+ 'l_r': 0.0002,
+ 'max_neighbors': 16,
+ 'n_nodes': 50000,
+ 'net_stem_width': 0.5,
+ 'no_eval': False,
+ 'no_events': False,
+ 'num_interframe_steps': 1,
+ 'num_scales': 2,
+ 'output_directory': 'log',
+ 'pooling_aggr': 'max',
+ 'pooling_dim_at_output': '5x7',
+ 'radius': 0.01,
+ 'run_test': False,
+ 'task': 'detection',
+ 'time_window_us': 1000000,
+ 'tot_num_epochs': 801,
+ 'use_image': True,
+ 'weight_decay': 1e-05,
+ 'yolo_stem_width': 0.5}
+init datasets
+init net
+/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=ResNet50_Weights.IMAGENET1K_V1`. You can also use `weights=ResNet50_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+/home/mlc/.conda/envs/dagr/lib/python3.8/site-packages/torch/functional.py:534: UserWarning: torch.meshgrid: in an upcoming release, it will be required to pass the indexing argument. (Triggered internally at ../aten/src/ATen/native/TensorShape.cpp:3595.)
+  return _VF.meshgrid(tensors, **kwargs)  # type: ignore[attr-defined]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Testing classic-breeze-78: 100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 4990/4990 [14:00<00:00,  5.94it/s]
+creating index...
+index created!
+Loading and preparing results...
+DONE (t=0.34s)
+creating index...
+index created!
+'Time Window: 0 ms \t mAP: 0.4354982774352339'
+
+compiling detections for saving...: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 9980/9980 [00:01<00:00, 8321.77it/s]
